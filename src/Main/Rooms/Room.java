@@ -1,6 +1,7 @@
 package Main.Rooms;
 
 import Main.Enums.Directions;
+import Main.Enums.KeyWords;
 import Main.TextParser.Colorlog;
 import org.w3c.dom.bootstrap.DOMImplementationRegistry;
 
@@ -157,6 +158,12 @@ public class Room {
      * und führt die auf die Wand passende Funktion aus.
      */
     public void interactWithWall(){
+
+    }
+
+
+    public void interactWithRoom(KeyWords keyword){
+
 
     }
 

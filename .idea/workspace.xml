@@ -36,8 +36,8 @@
       <file leaf-file-name="Wall.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/Rooms/Wall.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+            <state relative-caret-position="211">
+              <caret line="55" column="44" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="44" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -45,17 +45,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Room.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Room.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main/Rooms/Room.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="109" column="40" lean-forward="true" selection-start-line="109" selection-start-column="40" selection-end-line="109" selection-end-column="40" />
+            <state relative-caret-position="392">
+              <caret line="158" column="33" selection-start-line="158" selection-start-column="33" selection-end-line="158" selection-end-column="33" />
               <folding>
                 <element signature="e#2254#2255#0" expanded="true" />
                 <element signature="e#2292#2293#0" expanded="true" />
                 <element signature="e#2542#2543#0" expanded="true" />
                 <element signature="e#2598#2599#0" expanded="true" />
                 <element signature="docComment;method#getRoomHelp#0;class#Room#0" />
+                <element signature="method#getRoomHelp#0;class#Room#0" />
                 <element signature="docComment;method#wallInfos#0;class#Room#0" />
                 <element signature="method#wallInfos#0;class#Room#0" />
                 <element signature="e#3166#3167#0" expanded="true" />
@@ -65,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RoomTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RoomTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/Rooms/RoomTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="77" column="9" lean-forward="true" selection-start-line="77" selection-start-column="9" selection-end-line="77" selection-end-column="9" />
+            <state relative-caret-position="380">
+              <caret line="74" column="36" lean-forward="true" selection-start-line="74" selection-start-column="36" selection-end-line="74" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -115,6 +116,7 @@
     <findStrings>
       <find>getwa</find>
       <find>FOCUSE</find>
+      <find>befinde</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -148,7 +150,7 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-1" />
-    <option name="y" value="-4" />
+    <option name="y" value="-1084" />
     <option name="width" value="1922" />
     <option name="height" value="1085" />
   </component>
@@ -434,32 +436,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1531109995907</updated>
-      <workItem from="1531109997098" duration="6154000" />
+      <workItem from="1531109997098" duration="6449000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="WallTest - 2018.07.09 at 06h 55m 39s.xml">
-      <configuration name="WallTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="WallTest - 2018.07.09 at 06h 55m 44s.xml">
-      <configuration name="WallTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="WallGleisTest_GleisCheck - 2018.07.09 at 07h 08m 48s.xml">
-      <configuration name="WallGleisTest.GleisCheck" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="WallGleisTest_GleisCheck - 2018.07.09 at 07h 11m 41s.xml">
-      <configuration name="WallGleisTest.GleisCheck" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="getNextRoomTest_WallWithDoor - 2018.07.09 at 07h 20m 57s.xml">
-      <configuration name="getNextRoomTest.WallWithDoor" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RoomTest_getRoomName - 2018.07.09 at 07h 56m 44s.xml">
-      <configuration name="RoomTest.getRoomName" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RoomTest_setRoomDirection - 2018.07.09 at 07h 56m 49s.xml">
-      <configuration name="RoomTest.setRoomDirection" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="RoomTest_setRoomDirection - 2018.07.09 at 07h 58m 08s.xml">
       <configuration name="RoomTest.setRoomDirection" configurationId="JUnit" />
     </history-entry>
@@ -469,13 +450,33 @@
     <history-entry file="RoomTest_getNiceRoomDescription - 2018.07.09 at 08h 01m 30s.xml">
       <configuration name="RoomTest.getNiceRoomDescription" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="RoomTest_getNiceRoomDescription - 2018.07.09 at 08h 02m 32s.xml">
+      <configuration name="RoomTest.getNiceRoomDescription" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RoomTest_getNiceRoomDescription - 2018.07.09 at 08h 02m 43s.xml">
+      <configuration name="RoomTest.getNiceRoomDescription" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RoomTest_getNiceRoomDescription - 2018.07.09 at 08h 03m 12s.xml">
+      <configuration name="RoomTest.getNiceRoomDescription" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RoomTest_getNiceRoomDescription - 2018.07.09 at 08h 04m 21s.xml">
+      <configuration name="RoomTest.getNiceRoomDescription" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RoomTest_getNiceRoomDescription - 2018.07.09 at 08h 05m 11s.xml">
+      <configuration name="RoomTest.getNiceRoomDescription" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RoomTest_getNiceRoomDescription - 2018.07.09 at 08h 05m 42s.xml">
+      <configuration name="RoomTest.getNiceRoomDescription" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RoomTest_getNiceRoomDescription - 2018.07.09 at 08h 06m 18s.xml">
+      <configuration name="RoomTest.getNiceRoomDescription" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6154000" />
+    <option name="totallyTimeSpent" value="6449000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-4" width="1922" height="1085" extended-state="6" />
-    <editor active="true" />
+    <frame x="-1" y="-1084" width="1922" height="1085" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="6" />
       <window_info anchor="bottom" id="TODO" order="11" />
@@ -487,14 +488,14 @@
       <window_info anchor="right" id="Maven Projects" order="5" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="7" visible="true" weight="0.26536885" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.32991803" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.32889345" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.32991803" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.49790794" visible="true" weight="0.209375" />
+      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.4969419" visible="true" weight="0.209375" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="SciView" order="1" />
-      <window_info id="Structure" order="6" sideWeight="0.50209206" side_tool="true" visible="true" weight="0.209375" />
+      <window_info id="Structure" order="6" sideWeight="0.5030581" side_tool="true" visible="true" weight="0.209375" />
       <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
       <window_info id="UI Designer" order="1" />
       <window_info anchor="right" id="Theme Preview" order="3" />
@@ -533,13 +534,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/Items/genericItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -594,16 +588,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/Rooms/Wall.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Test/Rooms/getNextRoomTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -614,28 +598,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/Rooms/Wall.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="55" column="44" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="44" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/Items/genericItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/Rooms/RoomTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="74" column="36" lean-forward="true" selection-start-line="74" selection-start-column="36" selection-end-line="74" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/Rooms/Room.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="109" column="40" lean-forward="true" selection-start-line="109" selection-start-column="40" selection-end-line="109" selection-end-column="40" />
+        <state relative-caret-position="392">
+          <caret line="158" column="33" selection-start-line="158" selection-start-column="33" selection-end-line="158" selection-end-column="33" />
           <folding>
             <element signature="e#2254#2255#0" expanded="true" />
             <element signature="e#2292#2293#0" expanded="true" />
             <element signature="e#2542#2543#0" expanded="true" />
             <element signature="e#2598#2599#0" expanded="true" />
             <element signature="docComment;method#getRoomHelp#0;class#Room#0" />
+            <element signature="method#getRoomHelp#0;class#Room#0" />
             <element signature="docComment;method#wallInfos#0;class#Room#0" />
             <element signature="method#wallInfos#0;class#Room#0" />
             <element signature="e#3166#3167#0" expanded="true" />
             <element signature="e#3199#3200#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/Rooms/RoomTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="77" column="9" lean-forward="true" selection-start-line="77" selection-start-column="9" selection-end-line="77" selection-end-column="9" />
         </state>
       </provider>
     </entry>
