@@ -3,6 +3,7 @@ package Main.Rooms;
 import Main.Enums.Directions;
 import Main.Enums.KeyWords;
 import Main.TextParser.Colorlog;
+import Main.Texte.TextStorage;
 import org.w3c.dom.bootstrap.DOMImplementationRegistry;
 
 import java.awt.*;
@@ -88,34 +89,34 @@ public class Room {
      * Gibt eine Beschreibung des Ganzen Raumes
      */
     public void getRoomHelp(){
-        Colorlog.white("Du befindest dich im Raum: ");
+        Colorlog.white(TextStorage.ROOM_LOCATION);
         Colorlog.blue(roomName);
-        Colorlog.white("\n");
-        Colorlog.white("Nach einer kurzen Inspektion notierst du: \n");
+        Colorlog.white(TextStorage.LINEBREAK);
+        Colorlog.white(TextStorage.ROOM_INSPECTION_NOTATION);
 
         //Beschreibungen Norden
-        Colorlog.green("Im Norden: \n");
-        Colorlog.cyan("---> ");
+        Colorlog.green(TextStorage.DIRECTION_NORTH);
+        Colorlog.cyan(TextStorage.RIGHTARROW);
         Colorlog.white(nordWand.getWallDescription());
-        Colorlog.white("\n");
+        Colorlog.white(TextStorage.LINEBREAK);
 
         //Beschreibungen Osten
-        Colorlog.green("Im Osten: \n");
-        Colorlog.cyan("---> ");
+        Colorlog.green(TextStorage.DIRECTION_EAST);
+        Colorlog.cyan(TextStorage.RIGHTARROW);
         Colorlog.white(ostWand.getWallDescription());
-        Colorlog.white("\n");
+        Colorlog.white(TextStorage.LINEBREAK);
 
         //Beschreibungen Süden
-        Colorlog.green("Im Süden: \n");
-        Colorlog.cyan("---> ");
+        Colorlog.green(TextStorage.DIRECTION_SOUTH);
+        Colorlog.cyan(TextStorage.RIGHTARROW);
         Colorlog.white(suedWand.getWallDescription());
-        Colorlog.white("\n");
+        Colorlog.white(TextStorage.LINEBREAK);
 
         //Beschreibungen West
-        Colorlog.green("Im Westen: \n");
-        Colorlog.cyan("---> ");
+        Colorlog.green(TextStorage.DIRECTION_WEST);
+        Colorlog.cyan(TextStorage.RIGHTARROW);
         Colorlog.white(westWand.getWallDescription());
-        Colorlog.white("\n");
+        Colorlog.white(TextStorage.LINEBREAK);
 
 
     }
@@ -125,24 +126,25 @@ public class Room {
      * @param direction ist ein Enum, welches eines von 4 Werten annehmen kann {NORTH, EAST, SOUTH, WEST}
      * @return Die Funktion gibt die Beschreibung der entsprechenden Wand zurück
      */
-    public String wallInfos(Enum<Directions> direction){
-
-        if(direction == Directions.NORTH){
-            return nordWand.getWallDescription();
-
-        }else if(direction == Directions.EAST){
-            return ostWand.getWallDescription();
-
-        }else if(direction == Directions.SOUTH){
-            return suedWand.getWallDescription();
-
-        }else if(direction == Directions.WEST){
-            return westWand.getWallDescription();
-
-        }else{
-            Colorlog.white("Shit something went wrong");
-            return "";
+    public String wallInfos(Directions direction){
+        String output;
+        switch (direction) {
+            case NORTH:
+                output = nordWand.getWallDescription();
+                break;
+            case EAST:
+                output = ostWand.getWallDescription();
+                break;
+            case SOUTH:
+                output = suedWand.getWallDescription();
+                break;
+            case WEST:
+                output = westWand.getWallDescription();
+                break;
+            default:
+                output = TextStorage.OOPS;
         }
+        return output;
     }
 
     public String wallInfos(){

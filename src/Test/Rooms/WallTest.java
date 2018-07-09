@@ -1,9 +1,9 @@
 package Test.Rooms;
 
-import Main.Items.Kiste;
 import Main.Items.genericItem;
 import Main.Rooms.Wall;
 import Main.TextParser.Colorlog;
+import Main.Texte.TextStorage;
 import org.testng.annotations.Test;
 
 import static org.junit.Assert.*;
@@ -18,7 +18,7 @@ public class WallTest {
     @Test
     public void basicConstructor(){
         Wall basicWand = new Wall();
-        assertEquals("An dieser hier befindet sich nichts", basicWand.getWallDescription());
+        assertEquals(TextStorage.WALL_EMPTY, basicWand.getWallDescription());
     }
 
 
@@ -29,7 +29,7 @@ public class WallTest {
 
         Wall aRoomWithAView = new Wall(description);
         assertEquals("Du kannst die Berge aus dem Fenster aus sehen. Es fällt dir auf dass eine Zahl in das Glas geritzt ist", aRoomWithAView.getWallDescription());
-        assertEquals("Es gibt hier keinen Gegenstand", aRoomWithAView.inspectWallObject());
+        assertEquals(TextStorage.WALL_INSPECTION_EMPTY, aRoomWithAView.inspectWallObject());
     }
 
 
@@ -61,7 +61,7 @@ public class WallTest {
         genericItem key = new genericItem("Schlüssel");
 
         //Erstelle Wandobjekt
-        Wall wallWithBox = new Wall(description,key,"Verschlüsselte Kiste",1111);
+        Wall wallWithBox = new Wall(description,"Verschlüsselte Kiste", key,1111);
 
         //Testen der Wandbeschreibung
         assertEquals("Es sieht so aus, als ob sich an der Wand eine Kiste befinden würde",wallWithBox.getWallDescription());

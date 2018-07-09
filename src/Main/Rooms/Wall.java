@@ -1,13 +1,13 @@
-/***
- * Die Klasse Wall kann unterschiedliche Objekte besitzen. Es kann sein, dass sie gar nichts hat, eine Tür oder eine Kiste besitzt
- * //TODO weitere Objekte hinzufügen, falls nötig
- */
-
 package Main.Rooms;
 
 import Main.Items.Kiste;
 import Main.Items.genericItem;
-import Main.TextParser.Colorlog;
+import Main.Texte.TextStorage;
+
+/***
+ * Die Klasse Wall kann unterschiedliche Objekte besitzen. Es kann sein, dass sie gar nichts hat, eine Tür oder eine Kiste besitzt
+ * //TODO weitere Objekte hinzufügen, falls nötig
+ */
 
 public class Wall {
 
@@ -24,7 +24,7 @@ public class Wall {
 
     /**
      * Generieren einer Wand mit beschreibung
-     * @param wallDescription
+     * @param wallDescription beschreibt die Wand
      */
     public Wall(String wallDescription){
         this.wallDescription = wallDescription;
@@ -33,7 +33,7 @@ public class Wall {
     /***
      * Generieren einer Wand, an welcher eine unverschlüsselte Kiste steht
      * @param wallDescription Beschreibung um was für eine Wand es sich handelt (z.B Kiste, Truhe, Schrank, Blumentopf etc.)
-     * @param boxName
+     * @param boxName Ist der Name der Box
      * @param item Ist der Gegenstand welcher sich in der Box befinden sollte
      */
     public Wall(String wallDescription, String boxName, genericItem item){
@@ -43,17 +43,17 @@ public class Wall {
 
     /***
      * Generieren einer Wand, an welcher eine verschlüsselte Kiste steht
-     * @param wallDescription
-     * @param item
+     * @param wallDescription beschreibt die Wand
+     * @param item ist ein Item
      */
-    public Wall(String wallDescription, genericItem item,String boxName, int code){
+    public Wall(String wallDescription, String boxName, genericItem item, int code){
         this.wallDescription = wallDescription;
         this.box = new Kiste(item,boxName,code);
     }
 
     public Wall(Room nextRoom){
         this.nextRoom = nextRoom;
-        this.wallDescription = "Hier befindet sich eine Tür, welche dich " +nextRoom.getRoomName() + " führt.";
+        this.wallDescription = TextStorage.WALL_DESCRIPTION_START + nextRoom.getRoomName() + TextStorage.WALL_DESCRIPTION_END;
     }
 
 
@@ -66,10 +66,10 @@ public class Wall {
         if(wallDescription != null){
             return wallDescription;
         }else if(nextRoom != null){
-            return "Hier befindet sich eine Tür nach: "+ nextRoom.getRoomName();
+            return TextStorage.WALL_DOOR_TO_DIRECTION + nextRoom.getRoomName();
         }
         else{
-            return "An dieser hier befindet sich nichts";
+            return TextStorage.WALL_EMPTY;
         }
     }
 
@@ -77,17 +77,17 @@ public class Wall {
     /***
      * Falls sich an der Wand ein spezieller Gegenstand wie eine Kiste befindet, so wird
      * diese beschrieben.
-     * @return
+     * @return Gibt das Inspect-Ergebnis zurück
      */
     public String inspectWallObject(){
         //TODO später hier noch eine Option für die Türe hinzufügen
         if(item != null){
-            return "An dieser Wand befindet sich: "+item.getItemName() + "\n";
+            return TextStorage.WALL_INSPECTION_START + item.getItemName() + TextStorage.LINEBREAK;
         }else if(box != null){
-            return "An dieser Wand befindet sich: " + box.getKistenName()+ "\n";
+            return TextStorage.WALL_INSPECTION_START + box.getKistenName()+ TextStorage.LINEBREAK;
         }
         else {
-            return "Es gibt hier keinen Gegenstand";
+            return TextStorage.WALL_INSPECTION_EMPTY; //TODO: TESTS ändern
         }
     }
 

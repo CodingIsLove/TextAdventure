@@ -7,13 +7,14 @@ package Main.Items;
 
 
 import Main.TextParser.Colorlog;
+import Main.Texte.TextStorage;
 
 import java.awt.*;
 
 public class genericItem {
     private String name;
     //TODO herausfinden, wie den Purpose verwenden
-    private String purpose = "Hmmm ich weiss nicht, wozu ich diesen Gegenstand verwenden kann.";
+    private String purpose = TextStorage.ITEM_PURPOSE;
 
 
     //TODO Noch weitere Eigenschaften hinzufügen bsp HP, EP, PRÜFUNGEN etc.

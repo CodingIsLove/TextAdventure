@@ -5,15 +5,14 @@
 
 package Main.Items;
 import Main.TextParser.Colorlog;
-
-import java.awt.*;
+import Main.Texte.TextStorage;
 
 public class Kiste {
 
     private genericItem item;
     private Integer code;
     private boolean isLocked;
-    private String boxName = "Kiste";
+    private String boxName;
 
 
     /**
@@ -42,22 +41,21 @@ public class Kiste {
     /**
      * Verschlossene Kisten öffnen
      * @param code welcher verwendet wird um die Kiste hoffentlich zu öffnen
-     * @return
      */
     public void unlockKiste(Integer code){
         //Falls der Code Stimmt wird die Kiste geöffnet
-        if(this.code == code) {
+        if(this.code.equals(code)) {
             this.isLocked = false;
-            Colorlog.green("Wow! Der Code wurde geknackt und die Kiste ist nun offen! \n");
+            Colorlog.green(TextStorage.BOX_OPENING + TextStorage.LINEBREAK);
         }else {
-            Colorlog.red("Leider Stimmt der Code nicht! \n");
+            Colorlog.red(TextStorage.BOX_LOCKED + TextStorage.LINEBREAK);
         }
 
     }
 
     /**
      * Kiste wird geöffnet und der Gegenstand wird dem Inventar des Spielers hinzugefügt
-     * @return
+     * @return returns a genericItem
      */
     public genericItem openKiste(){
 
