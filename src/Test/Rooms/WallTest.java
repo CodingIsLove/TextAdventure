@@ -3,7 +3,8 @@ package Test.Rooms;
 import Main.Items.Kiste;
 import Main.Items.genericItem;
 import Main.Rooms.Wall;
-import org.junit.Test;
+import Main.TextParser.Colorlog;
+import org.testng.annotations.Test;
 
 import static org.junit.Assert.*;
 
@@ -45,7 +46,9 @@ public class WallTest {
         assertEquals("Du kannst die Berge aus dem Fenster aus sehen. Es fällt dir auf dass eine Zahl in das Glas geritzt ist", aRoomWithADescription.getWallDescription());
         assertEquals(pult, aRoomWithADescription.openBox());
         assertEquals(null,aRoomWithADescription.openBox());
-        assertEquals("An dieser Wand befindet sich: pult",aRoomWithADescription.inspectWallObject());
+        Colorlog.red(aRoomWithADescription.inspectWallObject());
+
+        assertEquals("An dieser Wand befindet sich: pult\n",aRoomWithADescription.inspectWallObject());
     }
 
 
@@ -60,11 +63,11 @@ public class WallTest {
         //Erstelle Wandobjekt
         Wall wallWithBox = new Wall(description,key,"Verschlüsselte Kiste",1111);
 
-        //Testen der Beschreibung
+        //Testen der Wandbeschreibung
         assertEquals("Es sieht so aus, als ob sich an der Wand eine Kiste befinden würde",wallWithBox.getWallDescription());
 
         //Testen ob Kiste beschrieben wird
-        assertEquals("An dieser Wand befindet sich: ", wallWithBox.inspectWallObject());
+        assertEquals("An dieser Wand befindet sich: Verschlüsselte Kiste\n", wallWithBox.inspectWallObject());
 
         //Versuche die verschlossene True zu öffnen
         // TODO: assertEquals();

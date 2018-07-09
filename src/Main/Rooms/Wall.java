@@ -14,7 +14,7 @@ public class Wall {
     private genericItem item = null;
     private Kiste box = null;
     private String wallDescription = null;
-    private Room nextRoom;
+    private Room nextRoom = null;
 
 
     /***
@@ -58,17 +58,17 @@ public class Wall {
 
 
 
-    //TODO konstuktor für Türen
-
-
     /**
-     * Gibt die Beschreibung der Wand zurück
-     * @return
+     * Gibt die Beschreibung der Wand zurück. Sagt, ob es eine Kiste, Türe oder nichts gibt.
+     * @return Beschreibung der Wand
      */
     public String getWallDescription(){
         if(wallDescription != null){
             return wallDescription;
-        }else{
+        }else if(nextRoom != null){
+            return "Hier befindet sich eine Tür nach: "+ nextRoom.getRoomName();
+        }
+        else{
             return "An dieser hier befindet sich nichts";
         }
     }
@@ -83,18 +83,36 @@ public class Wall {
         //TODO später hier noch eine Option für die Türe hinzufügen
         if(item != null){
             return "An dieser Wand befindet sich: "+item.getItemName() + "\n";
-        }else{
+        }else if(box != null){
+            return "An dieser Wand befindet sich: " + box.getKistenName()+ "\n";
+        }
+        else {
             return "Es gibt hier keinen Gegenstand";
         }
     }
 
     public genericItem openBox(){
-        return box.openKiste();
+        if(box == null){
+            return null;
+        }else{
+            return box.openKiste();
+        }
     }
 
+
+    /**
+     * Öffnen einer verschlossenen Box
+     * @param code Code um die Kiste zu öffnen
+     * @return Falls der Code richtig eingegeben, kommt das Item in der Kiste zurück
+     */
     public genericItem openLockedBox(int code){
         box.unlockKiste(code);
         return box.openKiste();
+    }
+
+
+    public Room getNextRoom(){
+        return nextRoom;
     }
 
 
