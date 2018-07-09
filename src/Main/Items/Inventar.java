@@ -6,6 +6,8 @@
 
 package Main.Items;
 import Main.TextParser.Colorlog;
+import Main.Texte.TextStorage;
+
 import java.util.ArrayList;
 
 public class Inventar {
@@ -28,11 +30,11 @@ public class Inventar {
 
     /***
      * Beschreibung eines gesuchten  Elementes aus dem Inventar
-     * @param itemName
+     * @param itemName der Name des Items
      */
     public void getPickedItemDetails(String itemName){
         for(genericItem item : inventar){
-            if(item.getItemName() == itemName){
+            if(item.getItemName().equals(itemName)){
                 item.getDescription();
             }
         }
@@ -44,13 +46,13 @@ public class Inventar {
      */
     public void getInventar(){
         if(inventar.toArray().length == 0){
-            Colorlog.red("Es befindet sich nichts in deinem Inventar !");
+            Colorlog.red(TextStorage.EMPTY_INVENTORY);
         }else{
-            Colorlog.white("Dein Inventar besteht aus: \n");
+            Colorlog.white(TextStorage.INVENTORY_START_MESSAGE);
 
             for(genericItem item : inventar){
-                Colorlog.yellow("*** ") ;
-                Colorlog.white(item.getItemName() + "\n");
+                Colorlog.yellow(TextStorage.LINE_FILLER) ;
+                Colorlog.white(item.getItemName() + TextStorage.LINEBREAK);
             }
         }
     }

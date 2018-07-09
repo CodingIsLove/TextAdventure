@@ -1,6 +1,8 @@
-package Main.Rooms;
+package Test.Rooms;
 
 import Main.Enums.Directions;
+import Main.Rooms.Room;
+import Main.Rooms.Wall;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

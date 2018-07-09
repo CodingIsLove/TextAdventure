@@ -14,7 +14,7 @@ public enum KeyWords {
      * OPEN <Kiste>                                   --> Verwenden für Verschlüsselt|Unverschlüsselte Kiste
      * TALK <Person>                                  --> Verwenden um mit einer Person zu interagieren TODO: schreiben einer Personklasse
      * LOOK <Direction>                               --> Verwenden für Raum
-     * USE <inventarObject> for                       -->
+     * USE <inventarObject> for  <genericObject>      -->
      * PUT <genericObject> in <Kiste>
      */
 
