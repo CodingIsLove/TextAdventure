@@ -168,4 +168,10 @@ public class Room {
     }
 
 
+    /***
+     * TODO:
+     * Sauber überlegen, wie genau mit einem Raum interagiert werden kann
+     */
+
 }
+

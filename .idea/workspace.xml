@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e5da4e7-5333-4d7d-bfe7-512a5fd7191c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Main/Rooms/RoomTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Test/Rooms/WallGleisTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Test/Rooms/getNextRoomTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Items/genericItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Items/genericItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main/Enums/KeyWords.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main/Rooms/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Rooms/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Rooms/Wall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Rooms/Wall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Texte/Intro/intro.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Texte/intro.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test/Rooms/WallTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/Rooms/WallTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/overview.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/overview.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -45,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Room.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Room.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/Rooms/Room.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="158" column="33" selection-start-line="158" selection-start-column="33" selection-end-line="158" selection-end-column="33" />
+            <state relative-caret-position="407">
+              <caret line="160" lean-forward="true" selection-start-line="160" selection-end-line="160" />
               <folding>
                 <element signature="e#2254#2255#0" expanded="true" />
                 <element signature="e#2292#2293#0" expanded="true" />
@@ -62,6 +56,15 @@
                 <element signature="e#3166#3167#0" expanded="true" />
                 <element signature="e#3199#3200#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KeyWords.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Main/Enums/KeyWords.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="29" lean-forward="true" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -107,8 +110,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -136,6 +139,7 @@
         <option value="$PROJECT_DIR$/src/Test/Rooms/RoomTest.java" />
         <option value="$PROJECT_DIR$/src/Main/Rooms/RoomTest.java" />
         <option value="$PROJECT_DIR$/src/Main/Rooms/Room.java" />
+        <option value="$PROJECT_DIR$/src/Main/Enums/KeyWords.java" />
       </list>
     </option>
   </component>
@@ -150,7 +154,7 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-1" />
-    <option name="y" value="-1084" />
+    <option name="y" value="-4" />
     <option name="width" value="1922" />
     <option name="height" value="1085" />
   </component>
@@ -436,7 +440,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1531109995907</updated>
-      <workItem from="1531109997098" duration="6449000" />
+      <workItem from="1531109997098" duration="6713000" />
     </task>
     <servers />
   </component>
@@ -473,7 +477,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6449000" />
+    <option name="totallyTimeSpent" value="6713000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-1084" width="1922" height="1085" extended-state="6" />
@@ -624,8 +628,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/Rooms/Room.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="158" column="33" selection-start-line="158" selection-start-column="33" selection-end-line="158" selection-end-column="33" />
+        <state relative-caret-position="407">
+          <caret line="160" lean-forward="true" selection-start-line="160" selection-end-line="160" />
           <folding>
             <element signature="e#2254#2255#0" expanded="true" />
             <element signature="e#2292#2293#0" expanded="true" />
@@ -638,6 +642,13 @@
             <element signature="e#3166#3167#0" expanded="true" />
             <element signature="e#3199#3200#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/Enums/KeyWords.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="29" lean-forward="true" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
         </state>
       </provider>
     </entry>
