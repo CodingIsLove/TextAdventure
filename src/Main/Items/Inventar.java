@@ -30,7 +30,7 @@ public class Inventar {
      * Beschreibung eines gesuchten  Elementes aus dem Inventar
      * @param itemName
      */
-    public void getItemDetails(String itemName){
+    public void getPickedItemDetails(String itemName){
         for(genericItem item : inventar){
             if(item.getItemName() == itemName){
                 item.getDescription();

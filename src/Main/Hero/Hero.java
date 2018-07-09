@@ -1,5 +1,6 @@
 package Main.Hero;
 
+import Main.Items.Inventar;
 import Main.Items.genericItem;
 import Main.Rooms.Room;
 import Main.TextParser.Colorlog;
@@ -12,19 +13,56 @@ public class Hero {
     private String name;
     private boolean isAlive = true;
     private int frustrationsLimit = 0;
+    private Inventar inventar;
     private Room aktuellerRaum;
 
-    //TODO write Inventarklasse private  inventar;
+    //TODO überlegen, ob das frustrationslimit überaupt noch implementierbar ist
     //TODO add the current map
 
     //TODO Setter und Getter Funktionen
     //TODO Infoboard  -- Current Stat
 
 
-    // Setze Namen
+    /**
+     * #####################
+     * #    Konstruktor    #
+     * #####################
+     */
     public Hero(String name){
         this.name = name;
     }
+
+    /**####################
+     * #Setter Funktionen #
+     * ####################
+     */
+
+    public void addItemToInventar(genericItem item){
+        inventar.addItem(item);
+    }
+
+    public void setRoom(Room neuerRaum){
+        this.aktuellerRaum = neuerRaum;
+    }
+
+    /**####################
+     * #Getter funktionen #
+     * ####################
+     */
+
+    public void showInventar(){
+       inventar.getInventar();
+    }
+
+    public void showItemDescription(String itemName){
+        inventar.getPickedItemDetails(itemName);
+    }
+
+    public void showRoomOverview(){
+        aktuellerRaum.getRoomHelp();
+    }
+
+
 
 
     /**
@@ -51,7 +89,6 @@ public class Hero {
 
 
     /**
-     *
      * @param healing Der Wert um welchen die Frustrationsgrenze vermindert wird
      */
     public void heal(int  healing){
@@ -73,7 +110,6 @@ public class Hero {
     public boolean isAlive() {
         return isAlive;
     }
-
 
     public int getFrustrationslimit(){
         return frustrationsLimit;
