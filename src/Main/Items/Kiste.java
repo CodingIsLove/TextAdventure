@@ -13,7 +13,7 @@ public class Kiste {
     private Integer code;
     private boolean isLocked;
     private String boxName;
-
+    //TODO write boxdescription
 
     /**
      * Konstruktoren für unverschlüsselte Kiste

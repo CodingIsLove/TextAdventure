@@ -91,6 +91,10 @@ public class Wall {
         }
     }
 
+    /**
+     * Öffnen einer Box
+     * @return
+     */
     public genericItem openBox(){
         if(box == null){
             return null;
