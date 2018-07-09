@@ -4,8 +4,8 @@ import Main.Items.Inventar;
 import Main.Items.genericItem;
 import Main.Rooms.Room;
 import Main.TextParser.Colorlog;
+import Main.Texte.TextStorage;
 
-import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 public class Hero {
@@ -76,14 +76,14 @@ public class Hero {
         frustrationsLimit += damage;
         if(frustrationsLimit>= 100){
             for(int i = 0; i<4; i++){
-                Colorlog.red("Fuck");
+                Colorlog.red(TextStorage.TAKE_DAMAGE);
                 try {
                     TimeUnit.SECONDS.sleep(1);
-                }catch (InterruptedException err){
-                    Colorlog.red("UUps there was an Error with the timeout!! " + err);
+                }catch (InterruptedException e){
+                    Colorlog.red(TextStorage.INTERRUPT_EXCEPTION_WARNING + e);
                 }
             }
-            System.out.println("Du hast keine Lust mehr und gibts auf... das Spiel ist vorbei und gehst nach Hause");
+            System.out.println(TextStorage.GAME_OVER);
             System.exit(0);
         }
     }

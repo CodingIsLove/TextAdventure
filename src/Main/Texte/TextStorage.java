@@ -37,6 +37,11 @@ public final class TextStorage {
     public static final String WALL_INSPECTION_START = "An dieser Wand befindet sich: ";
     public static final String WALL_INSPECTION_EMPTY = "Es gibt hier keinen Gegenstand.";
 
+    //HERO
+    public static final String INTERRUPT_EXCEPTION_WARNING = "Oops! Da gab es eine InterruptException!";
+    public static final String TAKE_DAMAGE = "*Seufz* - Mein Frustrationslevel steigt...";
+    public static final String GAME_OVER = "Du hast keine Lust mehr und gibst auf... Das Spiel ist vorbei und du gehst nach Hause.";
+
 
 
 }
