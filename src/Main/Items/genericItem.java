@@ -12,6 +12,7 @@ import java.awt.*;
 
 public class genericItem {
     private String name;
+    //TODO herausfinden, wie den Purpose verwenden
     private String purpose = "Hmmm ich weiss nicht, wozu ich diesen Gegenstand verwenden kann.";
 
 
