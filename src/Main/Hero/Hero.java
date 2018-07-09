@@ -18,8 +18,6 @@ public class Hero {
 
     //TODO überlegen, ob das frustrationslimit überaupt noch implementierbar ist
     //TODO add the current map
-
-    //TODO Setter und Getter Funktionen
     //TODO Infoboard  -- Current Stat
 
 
