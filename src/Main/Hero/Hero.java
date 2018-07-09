@@ -28,8 +28,9 @@ public class Hero {
      * #    Konstruktor    #
      * #####################
      */
-    public Hero(String name){
+    public Hero(String name, Room start){
         this.name = name;
+        this. aktuellerRaum = start;
     }
 
     /**####################
