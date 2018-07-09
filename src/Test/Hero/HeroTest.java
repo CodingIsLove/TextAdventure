@@ -28,8 +28,8 @@ public class HeroTest {
 
 
         // Erstellen des Bahnhofes
-        Wall nordWand = new Wall("Hier befinden sich die Gleise");
-        Wall suedWand = new Wall("Hier befinden sich die Gleise");
+        Wall nordWand = new Wall("Hier befinden sich die Gleise.");
+        Wall suedWand = new Wall("Hier befinden sich die Gleise.");
         Wall ostWand = new Wall(erdgeschoss);
         Wall westWand = new Wall("Dead End: Du willst doch nicht einfach wieder nach Hause gehen!");
         Room welle7 = new Room(nordWand,suedWand,ostWand,westWand,Directions.NORTH,"Bahnhof","Du befindest dich hier am Bahnhof Bern");
