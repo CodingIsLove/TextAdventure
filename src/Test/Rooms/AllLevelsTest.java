@@ -34,8 +34,14 @@ public class AllLevelsTest {
      */
     @Test
     public void roomSwitch(){
-        Room currentRoom = AllLevels.welle7;
-        assertEquals(TextStorage.ROOM_NAME_WELLE7,currentRoom.getRoomName());
+        Room currentRoom = AllLevels.bahnhof;
+        assertEquals(TextStorage.ROOM_NAME_PLATFORM,currentRoom.getRoomName());
+        currentRoom.getRoomHelp();
+
+        currentRoom.setFocusedDirection(Directions.EAST);
+
+        System.out.println(currentRoom.getFocusedWall());
+
 
     }
 

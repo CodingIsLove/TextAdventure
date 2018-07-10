@@ -125,7 +125,6 @@ public class Wall {
             if(singleRoom.getRoomId() == nextRoom) {
                 return singleRoom;
             }else{
-
                 // If something bad happens, you will get to the Bahnhof
                 System.out.println("Der Raum wurde nicht gefunden");
                 return AllLevels.bahnhof;
