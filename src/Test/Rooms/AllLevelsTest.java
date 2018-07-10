@@ -29,85 +29,126 @@ public class AllLevelsTest {
     }
 
 
-    /**
-     * Hell Yeah, finally! This fucking Door works
-     */
     @Test
-    public void roomSwitch(){
+    public void doorsBahnhof(){
         Room currentRoom = AllLevels.bahnhof;
-        assertEquals(TextStorage.ROOM_NAME_PLATFORM,currentRoom.getRoomName());
-        currentRoom.getRoomHelp();
 
         currentRoom.setFocusedDirection(Directions.EAST);
+        currentRoom = currentRoom.getFocusedWall().useDoor();
+        assertEquals(AllLevels.welle7.getRoomName(),currentRoom.getRoomName());
 
-        System.out.println(currentRoom.getFocusedWall());
+    }
+    @Test
+    public void doorsWelle(){
 
+        Room currentRoom = AllLevels.welle7;
 
+        // Durchgang Bahnhof
+        currentRoom.setFocusedDirection(Directions.WEST);
+        currentRoom = currentRoom.getFocusedWall().useDoor();
+        assertEquals(AllLevels.bahnhof.getRoomName(),currentRoom.getRoomName());
+
+        // Durchgang 1Etage
+        currentRoom = AllLevels.welle7;
+        currentRoom.setFocusedDirection(Directions.EAST);
+        currentRoom = currentRoom.getFocusedWall().useDoor();
+        assertEquals(AllLevels.etage1.getRoomName(),currentRoom.getRoomName());
     }
 
     @Test
-    public void walkTrough(){
+    public void doors1Etage(){
+        Room currentRoom = AllLevels.etage1;
 
-        Room currentRoom = AllLevels.bahnhof;
+        // Durchgang Welle7
+        currentRoom.setFocusedDirection(Directions.WEST);
+        currentRoom = currentRoom.getFocusedWall().useDoor();
+        assertEquals(AllLevels.welle7.getRoomName(),currentRoom.getRoomName());
 
-        System.out.println("---------------- Bahnhof -----------------");
-        currentRoom.getRoomHelp();
+        // Durchgang 2 Etage
+        currentRoom = AllLevels.etage1;
         currentRoom.setFocusedDirection(Directions.EAST);
         currentRoom = currentRoom.getFocusedWall().useDoor();
-        assertEquals(AllLevels.welle7,currentRoom.getRoomName());
-        System.out.println();
+        assertEquals(AllLevels.etage2.getRoomName(),currentRoom.getRoomName());
 
-        System.out.println("---------------- Welle 7 -----------------");
-        currentRoom.getRoomHelp();
-        currentRoom.setFocusedDirection(Directions.EAST);
-        currentRoom = currentRoom.getFocusedWall().useDoor();
-        System.out.println();
-
-
-        System.out.println("---------------- WC -----------------");
-        currentRoom.getRoomHelp();
-        currentRoom.setFocusedDirection(Directions.SOUTH);
-        currentRoom = currentRoom.getFocusedWall().useDoor();
-
-        currentRoom.setFocusedDirection(Directions.EAST);
-        currentRoom = currentRoom.getFocusedWall().useDoor();
-        System.out.println();
-
-
-        System.out.println("---------------- 2. Etage -----------------");
-        currentRoom.getRoomHelp();
+        // Durchgang WC
+        currentRoom = AllLevels.etage1;
         currentRoom.setFocusedDirection(Directions.NORTH);
         currentRoom = currentRoom.getFocusedWall().useDoor();
-        System.out.println();
-
-
-        System.out.println("---------------- Bahnhof -----------------");
-        currentRoom.getRoomHelp();
-
-        currentRoom.setFocusedDirection(Directions.SOUTH);
-        currentRoom = currentRoom.getFocusedWall().useDoor();
-
-        currentRoom.setFocusedDirection(Directions.EAST);
-        currentRoom = currentRoom.getFocusedWall().useDoor();
-        System.out.println();
-
-
-
-        System.out.println("--------------- Obere Etage ---------------");
-        currentRoom.getRoomHelp();
-
-        currentRoom.setFocusedDirection(Directions.EAST);
-        currentRoom = currentRoom.getFocusedWall().useDoor();
-        System.out.println();
-
-
-        System.out.println("--------------- Büro Gittig ---------------");
-        currentRoom.getRoomHelp();
-        System.out.println();
-
-
-
+        assertEquals(AllLevels.wc.getRoomName(),currentRoom.getRoomName());
 
     }
+    @Test
+    public void doorsWC(){
+        Room currentRoom = AllLevels.wc;
+
+        // Durchgang Etage1
+        currentRoom.setFocusedDirection(Directions.SOUTH);
+        currentRoom = currentRoom.getFocusedWall().useDoor();
+        assertEquals(AllLevels.etage1.getRoomName(),currentRoom.getRoomName());
+    }
+
+
+    @Test
+    public void doorEtage2(){
+        Room currentRoom = AllLevels.etage2;
+
+        // Durchgang Studienraum
+        currentRoom.setFocusedDirection(Directions.NORTH);
+        currentRoom = currentRoom.getFocusedWall().useDoor();
+        assertEquals(AllLevels.studienraum.getRoomName(),currentRoom.getRoomName());
+
+        //Durchgang Obere Etage
+        currentRoom = AllLevels.etage2;
+        currentRoom.setFocusedDirection(Directions.EAST);
+        currentRoom = currentRoom.getFocusedWall().useDoor();
+        assertEquals(AllLevels.obereEtage.getRoomName(),currentRoom.getRoomName());
+
+        //Durchgang Etage 1
+        currentRoom = AllLevels.etage2;
+        currentRoom.setFocusedDirection(Directions.WEST);
+        currentRoom = currentRoom.getFocusedWall().useDoor();
+        assertEquals(AllLevels.etage1.getRoomName(),currentRoom.getRoomName());
+    }
+
+    @Test
+    public void doorUnterrichtsraum(){
+        Room currentRoom = AllLevels.studienraum;
+
+        // Durchgang Studienraum
+        currentRoom.setFocusedDirection(Directions.SOUTH);
+        currentRoom = currentRoom.getFocusedWall().useDoor();
+        assertEquals(AllLevels.etage2.getRoomName(),currentRoom.getRoomName());
+    }
+
+    @Test
+    public void obereEtage(){
+        Room currentRoom = AllLevels.obereEtage;
+
+        // Durchgang Büro
+        currentRoom.setFocusedDirection(Directions.EAST);
+        currentRoom = currentRoom.getFocusedWall().useDoor();
+        assertEquals(AllLevels.office.getRoomName(),currentRoom.getRoomName());
+
+        currentRoom = AllLevels.obereEtage;
+
+        // Durchgang Etage2
+        currentRoom.setFocusedDirection(Directions.WEST);
+        currentRoom = currentRoom.getFocusedWall().useDoor();
+        assertEquals(AllLevels.etage2.getRoomName(),currentRoom.getRoomName());
+    }
+
+    @Test
+    public void office(){
+        Room currentRoom = AllLevels.office;
+
+        // Durchgang Büro
+        currentRoom.setFocusedDirection(Directions.NORTH);
+        currentRoom = currentRoom.getFocusedWall().useDoor();
+        assertEquals(AllLevels.obereEtage.getRoomName(),currentRoom.getRoomName());
+
+    }
+
+
+
 
 }

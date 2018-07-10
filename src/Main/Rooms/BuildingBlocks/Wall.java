@@ -13,7 +13,6 @@ import Main.Texte.TextStorage;
  */
 
 public class Wall {
-    private genericItem item = null;
     private Kiste box = null;
     private String wallDescription;
     private String wallName;
@@ -92,17 +91,13 @@ public class Wall {
     public String getBoxName(){
          return box.getKistenName();
     }
-
     public String getBoxDescription(){
          return box.getKistenDescription();
     }
-
-
     public genericItem openBox(){
          return box.openKiste();
 
     }
-
     public genericItem openBox(int code){
         return box.openKiste(code);
     }
@@ -121,15 +116,13 @@ public class Wall {
 
 
     public Room useDoor(){
-        for(Room singleRoom : AllLevels.AllRooms){
-            if(singleRoom.getRoomId() == nextRoom) {
-                return singleRoom;
-            }else{
-                // If something bad happens, you will get to the Bahnhof
-                System.out.println("Der Raum wurde nicht gefunden");
-                return AllLevels.bahnhof;
+        if(nextRoom != null) {
+            for (Room singleRoom : AllLevels.AllRooms) {
+                if (singleRoom.getRoomId() == nextRoom) {
+                    return singleRoom;
+                }
             }
-        };
+        }
         return null;
     }
 
