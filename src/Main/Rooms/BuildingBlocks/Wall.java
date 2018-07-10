@@ -127,11 +127,10 @@ public class Wall {
             }else{
 
                 // If something bad happens, you will get to the Bahnhof
+                System.out.println("Der Raum wurde nicht gefunden");
                 return AllLevels.bahnhof;
             }
-        }
-
-        //TODO: this should never happen
+        };
         return null;
     }
 

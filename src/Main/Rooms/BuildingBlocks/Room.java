@@ -33,7 +33,7 @@ public class Room {
      * @param direction Enum das angibt welche Wand zu fokusieren ist
      * @param roomName Name des Raumes
      */
-    public Room(Wall nordWand, Wall suedWand, Wall ostWand, Wall westWand, String roomName, RoomName id,Enum<Directions> direction){
+    public Room(Wall nordWand,  Wall ostWand ,Wall suedWand, Wall westWand, String roomName, RoomName id,Enum<Directions> direction){
         //Definieren der Wände
         this.nordWand = nordWand;
         this.suedWand = suedWand;
@@ -61,15 +61,13 @@ public class Room {
     /**
      *Selber Konstruktor wie oben, nur ohne Richtungszwang
      */
-    public Room(Wall nordWand, Wall suedWand, Wall ostWand, Wall westWand, String roomName, RoomName id){
+    public Room(Wall nordWand, Wall ostWand, Wall suedWand, Wall westWand, String roomName, RoomName id){
         //Definieren der Wände
         this.nordWand = nordWand;
         this.suedWand = suedWand;
         this.ostWand = ostWand;
         this.westWand = westWand;
         this.id = id;
-
-
         this.roomName = roomName;
     }
 

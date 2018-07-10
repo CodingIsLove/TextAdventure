@@ -58,8 +58,8 @@ public final class TextStorage {
     public static final String WALL_NAME_ESCALATOR = "Rolltreppe" ;
     public static final String WALL_DESCRIPTION_ESCALATOR = "Du siehst wie die Rollteppe Stufe für Stufe in Richtung Welle 7 hochsteigt. Dieser Weg führt in Richtung FFHS";
 
-    // Welle 7
-    public static final String ROOM_NAME_EG = "Welle 7";
+    // Welle 7 / Erdgeschoss
+    public static final String ROOM_NAME_WELLE7 = "Welle 7";
     public static final String WALL_NAME_GITTIG ="Gittig"  ;
     public static final String WALL_DESCRIPTION_GITTTIG = "Ach herje.... wie schön Sie zu sehen! Mir ist etwas unglaubiches Passiert. Als ich rasch im Wurst und Moritz meine gratis Wurst holen wollten mit meinen 10 Stempel auf der Stempelkarte"+
       " entwendete jemand die Prüfungen aus meinem Büro. Alle Prüfungen sind Weg!!!! \n"+
@@ -81,17 +81,16 @@ public final class TextStorage {
     public static final String DOOR_DESCRIPTION_STAIRS_EG_GANG = "Neben den modernen Liften der Welle 7, deren Funktionsweise dir bis heute ein Rätsel ist, siehst du das Treppenhaus welches dich in die 1. Etage führen kann";
 
 
-
-    // Erste Etage
-    public static final String ROOM_NAME_WELLE7 = "Welle 7";
-    public static final String EAST_WALL_NAME_FIRST_FLOOR = "Treppe";
+    // 1.Etage
+    public static final String ROOM_NAME_GANG1 = "1. Etage";
+    public static final String WALL_NAME_STAIRS = "Treppe";
     public static final String EAST_WALL_DESCRIPTION_FIRST_FLOOR = "Schonwieder Treppen! Diese führen dich zur zweiten Etage.";
-    public static final String WEST_WALL_NAME_FIRST_FLOOR = "Treppe";
     public static final String WEST_WALL_DESCRIPTION_FIRST_FLOOR = "Die Treppen hinunter befindet sich das Erdgeschoss mit den vielen Essensständen der Welle 7.";
     public static final String SOUTH_WALL_NAME_FIRST_FLOOR = "Lounge";
     public static final String SOUTH_WALL_DESCRIPTION_FIRST_FLOOR = "Ausgefallene Möbel. Das muss wohl eine der vielen Lounges von diesem Gebäude sein!";
     public static final String NORTH_WALL_NAME_FIRST_FLOOR = "Tür";
     public static final String NORTH_WALL_DESCRIPTION_FIRST_FLOOR = "Über der Tür hängt ein WC-Schild. Anscheinend befinden sich hier die topmodernen Toiletten der FFHS.";
+
 
     // WC
     public static final String ROOM_NAME_WC = "Toiletten";
@@ -103,11 +102,17 @@ public final class TextStorage {
     public static final String WALL_DESCRIPTION_SINK="Dieses Waschbecken sieht ganz normal aus.... Doch warte einmal! Es scheinen einige Blätter daneben auf dem Boden zu liegen!";
     public static final String ITEM_NAME_STATISTIK = "Statistik";
     public static final String ITEM_DESCRIPTION_STATISTIK ="Ein Stapel von Statistikprüfungen... Anscheinend warst du in dieser Prüfung nicht schlecht, doch deine 4.5 reicht nicht aus um deine schlechte Vornote zu kompensieren";
-
+    public static final String BOX_NAME_HANDTUCH = "Handtuchspender";
+    public static final String BOX_DESCRIPTION_HANDTUCH ="Aus dem Handtuchspender hängen ein paar Blätter. Heiliger Bimbam, das scheinen die verlorenen Statistikprüfungen zu sein! ";
+    public static final String BOX_OPEN_MESSAGE = "Stolz ziehst du die Statistikprüfungen aus dem Handtuchspender. Welch ein Triumpf!";
+    public static final String BOX_EMPTY_MESSAGE = "Du kannst nichts weiters im Handtuchspender finden. Schau lieber wo anderst nach";
+    public static final String WALL_NAME_WC_EXIT = "Ausgang WC";
+    public static final String WALL_DESCRIPTION_WC_EXIT = "Die Türe öffnet sich automatisch, vor dir ist wieder der Gang, welcher dich im Westen wieder ins Erdgeschoss"+
+            " führt oder Richtung Osten weitergeht zu weiteren Räumen";
 
     // Zweite Etage
     public static final String ROOM_NAME_2FLOOR = "2. Etage";
-    public static final String EAST_WALL_NAME_SECOND_FLOOR = "Tür";
+    public static final String EAST_WALL_NAME_SECOND_FLOOR = "Lift";
     public static final String EAST_WALL_DESCRIPTION_SECOND_FLOOR = "Du siehst den Lift, welchen dich zur Oberen Etage bringt.";
     public static final String WEST_WALL_NAME_SECOND_FLOOR = "Treppe";
     public static final String WEST_WALL_DESCRIPTION_SECOND_FLOOR = "Du schaust die Treppen hinunter und siehst die erste Etage.";
@@ -119,10 +124,14 @@ public final class TextStorage {
     //Studienraum
     public static final String ROOM_NAME_STUDIENRAUM = "Unterrichtsraum";
     public static final String ITEM_NAME_GTI = "Grundlagen Technische Informatik Prüfung (GTI)";
-    public static final String ITEM_PURPOSE_GTI = "Ein riesen Stapel Prüfungen. Mist! Du hast diese Prüfung vergeigt und nicht bestanden!";
+    public static final String ITEM_DESCRIPTION_GTI = "Ein riesen Stapel Prüfungen. Mist! Du hast diese Prüfung vergeigt und nicht bestanden!";
     public static final String ITEM_UNLOCK_GTI = "Du entnimmst den Stapel GTI Prüfungen aus dem Pult.";
 
     public static final String EAST_WALL_NAME_STUDY_ROOM = "Pult";
+    public static final String BOX_DESCRIPTION_PULT = "Die Schublade scheint nicht geschlossen zu sein";
+    public static final String BOX_OPEN_MESSAGE_PULT= "Du findest die GTI Prüfungen! Es scheint so, dass diese zusammen mit Prüfungen von der Migrosklubschule hier gelandet sind. "+
+            "Die Migros Klubschule ist aber nicht dein Problem, weshalb du diese Prüfungen kurzerhand in die Tonne trittst";
+    public static final String BOX_EMPTY_MESSAGE_PULT = "Die Schublade sieht leer aus, du hast hier bereits etwas gefunden !";
     public static final String EAST_WALL_DESCRIPTION_STUDY_ROOM = "Du schaust auf ein Pult, welches eine Schublade hat. Vielleicht befindet sich etwas darin.";
     public static final String WEST_WALL_NAME_STUDY_ROOM = "Whiteboard";
     public static final String WEST_WALL_DESCRIPTION_STUDY_ROOM = "An der Wand hängt ein Whiteboard. Wahrscheinlich wird in diesem Raum unterrichtet.";
