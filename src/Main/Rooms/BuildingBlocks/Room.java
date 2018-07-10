@@ -121,34 +121,29 @@ public class Room {
      * Gibt eine Beschreibung des Ganzen Raumes*/
 
     public void getRoomHelp(){
-        Colorlog.white(TextStorage.ROOM_LOCATION);
-        Colorlog.blue(roomName);
-        Colorlog.white(TextStorage.LINEBREAK);
-        Colorlog.white(TextStorage.ROOM_INSPECTION_NOTATION);
+        System.out.println(Colorlog.white(TextStorage.ROOM_LOCATION));
+        System.out.println(Colorlog.blue(roomName));
+        System.out.println(Colorlog.white(TextStorage.ROOM_INSPECTION_NOTATION));
 
         //Beschreibungen Norden
-        Colorlog.green(TextStorage.DIRECTION_NORTH);
-        Colorlog.cyan(TextStorage.RIGHTARROW);
-        Colorlog.white(nordWand.getWallName());
-        Colorlog.white(TextStorage.LINEBREAK);
+        System.out.println(Colorlog.green(TextStorage.DIRECTION_NORTH));
+        System.out.print(Colorlog.cyan(TextStorage.RIGHTARROW));
+        System.out.println(Colorlog.white(nordWand.getWallName()));
 
         //Beschreibungen Osten
-        Colorlog.green(TextStorage.DIRECTION_EAST);
-        Colorlog.cyan(TextStorage.RIGHTARROW);
-        Colorlog.white(ostWand.getWallName());
-        Colorlog.white(TextStorage.LINEBREAK);
+        System.out.println(Colorlog.green(TextStorage.DIRECTION_EAST));
+        System.out.print(Colorlog.cyan(TextStorage.RIGHTARROW));
+        System.out.println(Colorlog.white(ostWand.getWallName()));
 
         //Beschreibungen Süden
-        Colorlog.green(TextStorage.DIRECTION_SOUTH);
-        Colorlog.cyan(TextStorage.RIGHTARROW);
-        Colorlog.white(suedWand.getWallName());
-        Colorlog.white(TextStorage.LINEBREAK);
+        System.out.println(Colorlog.green(TextStorage.DIRECTION_SOUTH));
+        System.out.print(Colorlog.cyan(TextStorage.RIGHTARROW));
+        System.out.println(Colorlog.white(suedWand.getWallName()));
 
         //Beschreibungen West
-        Colorlog.green(TextStorage.DIRECTION_WEST);
-        Colorlog.cyan(TextStorage.RIGHTARROW);
-        Colorlog.white(westWand.getWallName());
-        Colorlog.white(TextStorage.LINEBREAK);
+        System.out.println(Colorlog.green(TextStorage.DIRECTION_WEST));
+        System.out.print( Colorlog.cyan(TextStorage.RIGHTARROW));
+        System.out.println(Colorlog.white(westWand.getWallName()));
     }
 
     /**

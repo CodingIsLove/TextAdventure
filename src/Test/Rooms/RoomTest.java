@@ -52,16 +52,23 @@ public class RoomTest {
     }
 
     @Test
-    public void interactWithWall() {
+    public void changeRoom() {
+
+        Room currentRoom = AllLevels.welle7;
+        currentRoom.getRoomHelp();
+
+
     }
 
     @Test
     public void getNiceRoomDescription(){
-
         Room currentRoom = AllLevels.bahnhof;
 
-
         // Console log einer schönen beschreibung
+        currentRoom.getRoomHelp();
+        currentRoom.setFocusedDirection(Directions.WEST);
+        currentRoom.getFocusedWall().useDoor();
+        System.out.println("-------------- Room should be switched now ----------------");
         currentRoom.getRoomHelp();
 
     }

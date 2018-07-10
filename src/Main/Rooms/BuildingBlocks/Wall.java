@@ -120,9 +120,9 @@ public class Wall {
     }
 
 
-    public Room useDoor(RoomName room){
+    public Room useDoor(){
         for(Room singleRoom : AllLevels.AllRooms){
-            if(singleRoom.getRoomId() == room) {
+            if(singleRoom.getRoomId() == nextRoom) {
                 return singleRoom;
             }else{
 

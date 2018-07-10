@@ -25,13 +25,13 @@ public final class TextStorage {
 
     //ROOM
     public static final String ROOM_LOCATION = "Du befindest dich im Raum: ";
-    public static final String ROOM_INSPECTION_NOTATION = "Nach einer kurzen Inspektion notierst du: \n";
+    public static final String ROOM_INSPECTION_NOTATION = "Nach einer kurzen Inspektion notierst du:";
 
     //DIRECTIONS
-    public static final String DIRECTION_NORTH = "Im Norden: \n";
-    public static final String DIRECTION_EAST = "Im Osten: \n";
-    public static final String DIRECTION_SOUTH = "Im Süden: \n";
-    public static final String DIRECTION_WEST = "Im Westen: \n";
+    public static final String DIRECTION_NORTH = "Im Norden:";
+    public static final String DIRECTION_EAST = "Im Osten:";
+    public static final String DIRECTION_SOUTH = "Im Süden:";
+    public static final String DIRECTION_WEST = "Im Westen:";
 
     //WALL
     public static final String WALL_DESCRIPTION_START = "Hier befindet sich eine Tür, welche dich ";
