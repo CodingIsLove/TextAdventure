@@ -17,7 +17,6 @@ public class Inventar {
     //Konstruktor
     public Inventar(){}
 
-
     /**
      *     Hinzufügen eines items zu dem Inventar
      */
@@ -32,27 +31,30 @@ public class Inventar {
      * Beschreibung eines gesuchten  Elementes aus dem Inventar
      * @param itemName der Name des Items
      */
-    public void getPickedItemDetails(String itemName){
+    public void getItemDetails(String itemName){
         for(genericItem item : inventar){
-            if(item.getItemName().equals(itemName)){
-                item.getDescription();
+            if(item.getItemName() == itemName){
+                System.out.println(item.getDescription());
             }
         }
     }
+
 
 
     /**
      * Ausgabe des Inventares
      */
     public void getInventar(){
-        if(inventar.toArray().length == 0){
-            Colorlog.red(TextStorage.EMPTY_INVENTORY);
+        if(inventar.size() == 0){
+            System.out.println(Colorlog.red(TextStorage.EMPTY_INVENTORY));
         }else{
-            Colorlog.white(TextStorage.INVENTORY_START_MESSAGE);
+            System.out.println(TextStorage.INVENTORY_START_MESSAGE);
 
             for(genericItem item : inventar){
-                Colorlog.yellow(TextStorage.LINE_FILLER) ;
-                Colorlog.white(item.getItemName() + TextStorage.LINEBREAK);
+                System.out.print(Colorlog.yellow(TextStorage.LINE_FILLER) );
+                System.out.println(item.getItemName());
+                System.out.println(Colorlog.white(TextStorage.INVENTORY_DESCRIPTION +item.getDescription()));
+                System.out.println();
             }
         }
     }

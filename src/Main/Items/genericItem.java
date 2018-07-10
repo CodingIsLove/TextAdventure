@@ -7,41 +7,28 @@ package Main.Items;
 
 
 import Main.TextParser.Colorlog;
-import Main.Texte.TextStorage;
-
-import java.awt.*;
 
 public class genericItem {
     private String name;
-    //TODO herausfinden, wie den Purpose verwenden
-    private String purpose = TextStorage.ITEM_PURPOSE;
+    private String description;
 
 
-    //TODO Noch weitere Eigenschaften hinzufügen bsp HP, EP, PRÜFUNGEN etc.
-    //Dies wäre auch durch vererbung möglich!
-
-
-    public genericItem(String name){
+    public genericItem(String name, String description){
         this.name = name;
-    }
-    public genericItem(String name, String purpose){
-        this.name = name;
-        this.purpose = purpose;
+        this.description = description;
     }
 
 
     //Gibt den namen String zurück
     public String getItemName(){
-        return name;
+        return this.name;
     }
 
-    public void getDescription(){
-        Colorlog.blue(this.name +"\n");
-
-        if(purpose != ""){
-            Colorlog.cyan("---> " + purpose + "\n");
-        }
-
+    /**
+     * Beschreibung des Gegenstandes mit Farben
+     */
+    public String getDescription(){
+        return this.description;
     }
 
 

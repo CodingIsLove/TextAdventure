@@ -21,39 +21,38 @@ public final class Colorlog {
 
 
     //Console Output in grün
-    public static void green(String text){
-        System.out.print(ANSI_GREEN + text +ANSI_GREEN);
+    public static String green(String text){
+        return ANSI_GREEN + text +ANSI_GREEN;
     }
 
     //Console Output in rot
-    public static void red(String warning){
-        System.out.print(ANSI_RED + warning + ANSI_RED);
+    public static String red(String warning){
+        return ANSI_RED + warning + ANSI_RED;
     }
 
     //Console Output in weiss
-    public static void white(String text){
-        System.out.print(ANSI_WHITE + text + ANSI_WHITE);
+    public static String white(String text){
+        return ANSI_WHITE + text + ANSI_WHITE;
     }
 
     //Console Output in gelb
-    public static void yellow(String text){
-        System.out.print(ANSI_YELLOW + text + ANSI_YELLOW);
+    public static String yellow(String text){
+        return ANSI_YELLOW + text + ANSI_YELLOW;
     }
 
     //Console Output in blau
-    public static void blue(String text){
-        System.out.print(ANSI_BLUE + text + ANSI_BLUE);
+    public static String blue(String text){
+        return ANSI_BLUE + text + ANSI_BLUE;
     }
 
     //Console Output in violet
-    public static void purple(String text){
-        System.out.print(ANSI_PURPLE + text + ANSI_PURPLE);
+    public static String purple(String text){
+        return ANSI_PURPLE + text + ANSI_PURPLE;
     }
 
     //Console Output in Cyan
-    public static void cyan(String text){
-        System.out.print(ANSI_CYAN+ text + ANSI_CYAN);
-    }
+    public static String cyan(String text){
+        return ANSI_CYAN+ text + ANSI_CYAN ;}
 
 }
 

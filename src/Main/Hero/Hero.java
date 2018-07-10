@@ -2,7 +2,7 @@ package Main.Hero;
 
 import Main.Items.Inventar;
 import Main.Items.genericItem;
-import Main.Rooms.Room;
+import Main.Rooms.BuildingBlocks.Room;
 import Main.TextParser.Colorlog;
 import Main.Texte.TextStorage;
 
@@ -19,6 +19,7 @@ public class Hero {
     //TODO überlegen, ob das frustrationslimit überaupt noch implementierbar ist
     //TODO add the current map
     //TODO Infoboard  -- Current Stat
+    //TODO: schreiben der Funktionen, welche für den Sprachparser verwendet werden müssen
 
 
     /**
@@ -54,7 +55,7 @@ public class Hero {
     }
 
     public void showItemDescription(String itemName){
-        inventar.getPickedItemDetails(itemName);
+        inventar.getItemDetails(itemName);
     }
 
     public void showRoomOverview(){
@@ -103,12 +104,6 @@ public class Hero {
         return this.name;
     }
 
-
-    //TODO nochmals nachschauen, ob dies Funktion wirklich nötig ist
-    //Check if hero is still living
-    public boolean isAlive() {
-        return isAlive;
-    }
 
     public int getFrustrationslimit(){
         return frustrationsLimit;

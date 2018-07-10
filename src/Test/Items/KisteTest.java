@@ -2,6 +2,7 @@ package Test.Items;
 
 import Main.Items.Kiste;
 import Main.Items.genericItem;
+import Main.Texte.TextStorage;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -9,35 +10,54 @@ import static org.junit.Assert.*;
 public class KisteTest {
 
 
-    // Test mit einer unverschlüsselten Kiste
     @Test
-    public void unlockedKiste(){
+    public void getKistenName() {
+        genericItem item = new genericItem(TextStorage.TEST_ITEM_NAME,TextStorage.TEST_ITEM_DESCRIPTION);
+        Kiste box = new Kiste(TextStorage.TEST_BOX_NAME, TextStorage.TEST_UNLOCKED_BOX_DESCRIPTION,TextStorage.TEST_OPEN_MESSAGE,TextStorage.TEST_EMPTY_MESSAGE,item);
 
-        //Generieren von Testobjekten
-        genericItem schatz = new genericItem("Schatz");
-        genericItem fussball = new genericItem("Fussball");
-        Kiste box1 = new Kiste(schatz,"Schatzkiste");
-
-
-        //###Testing
-        //Die Kiste sollte kein Schloss haben
-        assertFalse(box1.isLocked());
-
-        //Wenn die Kiste geöffnet wird sollte sie den Schatz zurückgeben
-        assertEquals(schatz, box1.openKiste());
-
-        //Nun sollte kein Schatz mehr in der Kiste sein
-        assertEquals(null, box1.openKiste());
-
-        //Fussball wird neu in die Kiste gelegt
-        box1.setItemInKiste(fussball);
-
-        assertEquals(fussball,box1.openKiste());
-        assertEquals(null,box1.openKiste());
-
-
-
+        assertEquals(TextStorage.TEST_BOX_NAME,box.getKistenName());
     }
 
+    @Test
+    public void getKistenDescription() {
+        genericItem item = new genericItem(TextStorage.TEST_ITEM_NAME,TextStorage.TEST_ITEM_DESCRIPTION);
+        Kiste box = new Kiste(TextStorage.TEST_BOX_NAME, TextStorage.TEST_UNLOCKED_BOX_DESCRIPTION,TextStorage.TEST_OPEN_MESSAGE,TextStorage.TEST_EMPTY_MESSAGE,item);
+
+        assertEquals(TextStorage.TEST_UNLOCKED_BOX_DESCRIPTION,box.getKistenDescription());
+    }
+
+    @Test
+    public void openKiste() {
+        genericItem item = new genericItem(TextStorage.TEST_ITEM_NAME,TextStorage.TEST_ITEM_DESCRIPTION);
+        Kiste box = new Kiste(TextStorage.TEST_BOX_NAME, TextStorage.TEST_UNLOCKED_BOX_DESCRIPTION,TextStorage.TEST_OPEN_MESSAGE,TextStorage.TEST_EMPTY_MESSAGE,item,TextStorage.TEST_DENY_BOX_ACCESS,10);
+
+        assertEquals(null,box.openKiste());
+    }
+
+    @Test
+    public void unlockKiste() {
+        System.out.println("-------------");
+        System.out.println("Handhabung einer verschlossenen Kiste");
+        System.out.println("-------------");
+        genericItem item = new genericItem(TextStorage.TEST_ITEM_NAME,TextStorage.TEST_ITEM_DESCRIPTION);
+        Kiste box = new Kiste(TextStorage.TEST_BOX_NAME, TextStorage.TEST_UNLOCKED_BOX_DESCRIPTION,TextStorage.TEST_OPEN_MESSAGE,TextStorage.TEST_EMPTY_MESSAGE,item,TextStorage.TEST_DENY_BOX_ACCESS,10);
+
+        // versuche verschlossene Kiste zu öffnen
+        assertEquals(null,box.openKiste());
+        assertEquals(true,box.isLocked());
+
+        // Kiste öffnen mit falschem Code
+        box.unlockKiste(20);
+
+        // Kiste öffnen mit richtigem Code
+        box.unlockKiste(10);
+
+        //Kiste öffnen, nachdem sie geöffnet wurde
+        assertEquals(item, box.openKiste());
+
+        //Zugeben, dass die Kiste verschlossen wurde
+        assertEquals(false, box.isLocked());
+
+    }
 
 }

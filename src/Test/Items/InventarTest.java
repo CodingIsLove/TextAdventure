@@ -12,9 +12,9 @@ public class InventarTest {
     Inventar inventar = new Inventar();
 
     //Erstellen von einigen dummy genericItems
-    genericItem fussball = new genericItem("Fussball");
-    genericItem schatz = new genericItem("schatz");
-    genericItem key = new genericItem("Schlüssel");
+    genericItem fussball = new genericItem("Fussball","macht spass");
+    genericItem schatz = new genericItem("schatz","ist viel Wert");
+    genericItem key = new genericItem("Schlüssel","kann türen öffnen");
 
 
     // Fülle Inventar mit dummy items
@@ -32,11 +32,18 @@ public class InventarTest {
         inventar.addItem(schatz);
         inventar.addItem(key);
 
-        //Ausgabe
+        System.out.println("------------ Get All Inventar Ausgabe ");
         inventar.getInventar();
     }
 
     @Test
     public void getItemDetails() {
+        inventar.addItem(fussball);
+        inventar.addItem(schatz);
+        inventar.addItem(key);
+
+        System.out.println("------------ Get details Ausgabe ");
+
+        inventar.getItemDetails("Fussball");
     }
 }

@@ -1,11 +1,13 @@
 package Test.Rooms;
 
 import Main.Enums.Directions;
-import Main.Rooms.Room;
-import Main.Rooms.Wall;
+import Main.Rooms.AllLevels;
+import Main.Rooms.BuildingBlocks.Room;
+import Main.Rooms.BuildingBlocks.Wall;
+import Main.Texte.TextStorage;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /***
  * Einfacher Test, ob die Funktionen des Raumes funktionieren
@@ -15,61 +17,37 @@ public class RoomTest {
 
     @Test
     public void getRoomDescription() {
-        //Erstellen des nächsten Raumes
-        Wall nordWand = new Wall();
-        Wall suedWand = new Wall();
-        Wall ostWand = new Wall();
-        Wall westWand = new Wall();
-        Room welle7 = new Room(nordWand,suedWand,ostWand,westWand,Directions.NORTH,"Welle 7","Hier befindest du dich in der Welle 7");
-
-        assertEquals("Hier befindest du dich in der Welle 7", welle7.getRoomDescription());
+        assertEquals(TextStorage.ROOM_NAME_WELLE7,AllLevels.welle7.getRoomName());
     }
 
     @Test
     public void setRoomDirection(){
 
-        Wall nordWand = new Wall();
-        Wall suedWand = new Wall();
-        Wall ostWand = new Wall();
-        Wall westWand = new Wall();
-        Room welle7 = new Room(nordWand,suedWand,ostWand,westWand,Directions.NORTH,"Welle 7","Hier befindest du dich in der Welle 7");
+        Room currentRoom = AllLevels.welle7;
 
         //Setzten erster Raumrichtung und auslesen
-        welle7.setFocusedDirection(Directions.NORTH);
-        assertEquals(Directions.NORTH, welle7.getFocusedDirection());
+        currentRoom.setFocusedDirection(Directions.NORTH);
+        assertEquals(Directions.NORTH, currentRoom.getFocusedDirection());
 
-        //Setzen zweiter Raumrichtung und auslesen
-        welle7.setFocusedDirection(Directions.WEST);
-        assertEquals(Directions.WEST, welle7.getFocusedDirection());
     }
 
     @Test
     public void getRoomName() {
-        //Erstellen des nächsten Raumes
-        Wall nordWand = new Wall();
-        Wall suedWand = new Wall();
-        Wall ostWand = new Wall();
-        Wall westWand = new Wall();
 
-        //Auslesen des Raumnames
-        Room welle7 = new Room(nordWand,suedWand,ostWand,westWand,Directions.NORTH,"Welle 7","Hier befindest du dich in der Welle 7");
-        assertEquals("Welle 7", welle7.getRoomName());
+        Room currentRoom = AllLevels.bahnhof;
+
+        assertEquals(TextStorage.ROOM_NAME_PLATFORM, currentRoom.getRoomName());
     }
 
     @Test
     public void wallInfos(){
-        //Erstellen des nächsten Raumes
-        Wall nordWand = new Wall("Diese Wand befindet sich im Norden");
-        Wall suedWand = new Wall("Diese Wand befindet sich im Süden");
-        Wall ostWand = new Wall("Diese Wand befindet sich im Osten");
-        Wall westWand = new Wall("Diese Wand befindet sich im Westen");
-        Room welle7 = new Room(nordWand,suedWand,ostWand,westWand,Directions.NORTH,"Welle 7","Hier befindest du dich in der Welle 7");
+        Room currentRoom = AllLevels.bahnhof;
 
         // Schauen, ob die Infos zu allen Wänden
-        assertEquals("Diese Wand befindet sich im Norden", welle7.wallInfos(Directions.NORTH));
-        assertEquals("Diese Wand befindet sich im Süden", welle7.wallInfos(Directions.SOUTH));
-        assertEquals("Diese Wand befindet sich im Osten", welle7.wallInfos(Directions.EAST));
-        assertEquals("Diese Wand befindet sich im Westen", welle7.wallInfos(Directions.WEST));
+        assertEquals(TextStorage.WALL_NAME_PLATFORM, currentRoom.wallInfos(Directions.NORTH));
+        assertEquals(TextStorage.WALL_NAME_PLATFORM, currentRoom.wallInfos(Directions.SOUTH));
+        assertEquals(TextStorage.WALL_NAME_DEAD_END, currentRoom.wallInfos(Directions.EAST));
+        assertEquals(TextStorage.WALL_NAME_ESCALATOR, currentRoom.wallInfos(Directions.WEST));
 
     }
 
@@ -79,15 +57,13 @@ public class RoomTest {
 
     @Test
     public void getNiceRoomDescription(){
-        //Erstellen des nächsten Raumes
-        Wall nordWand = new Wall("Diese Wand befindet sich im Norden");
-        Wall suedWand = new Wall("Diese Wand befindet sich im Süden");
-        Wall ostWand = new Wall("Diese Wand befindet sich im Osten");
-        Wall westWand = new Wall("Diese Wand befindet sich im Westen");
-        Room welle7 = new Room(nordWand,suedWand,ostWand,westWand,Directions.NORTH,"Welle 7","Hier befindest du dich in der Welle 7");
+
+        Room currentRoom = AllLevels.bahnhof;
+
 
         // Console log einer schönen beschreibung
-        welle7.getRoomHelp();
+        currentRoom.getRoomHelp();
 
     }
+
 }

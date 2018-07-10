@@ -1,38 +1,28 @@
 package Test.Items;
 
 import Main.Items.genericItem;
+import Main.Texte.TextStorage;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class genericItemTest {
 
-
-
-    //Erstellen eines Objektes
+    //Erstellen eines Objektes und Testen des Namens und Beschreibung
     @Test
     public void generateItem(){
-        genericItem item = new genericItem("Fussball");
+        genericItem item = new genericItem(TextStorage.TEST_ITEM_NAME,TextStorage.TEST_ITEM_DESCRIPTION);
+
         //Test ob der Gegenstand den richtigen String liefert
-        assertEquals("Fussball", item.getItemName());
+        assertEquals(TextStorage.TEST_ITEM_NAME, item.getItemName());
     }
 
-    //Testen der Beschreibung
     @Test
-    public void logNachrichten(){
-        genericItem item = new genericItem("Rucksack");
-        //Logge die Beschreibung von einem Rucksack
-        item.getDescription();
+    public void getDescription(){
+        genericItem item = new genericItem(TextStorage.TEST_ITEM_NAME,TextStorage.TEST_ITEM_DESCRIPTION);
 
-        //TODO erweitern, wenn Objekt mehr Eigenschaften besitzt
+        System.out.println(item.getDescription());
     }
 
-
-    //Ein objekt mit einen "purpose" hinzufügen
-    @Test
-    public void purpose(){
-        genericItem item = new genericItem("Messer","Es schneidet Gegenstände");
-        item.getDescription();
-    }
 
 }

@@ -1,24 +1,21 @@
-package Main.Rooms;
+package Main.Rooms.BuildingBlocks;
 
 import Main.Enums.Directions;
 import Main.Enums.KeyWords;
+import Main.Enums.RoomName;
+import Main.Rooms.AllLevels;
 import Main.TextParser.Colorlog;
 import Main.Texte.TextStorage;
-import org.w3c.dom.bootstrap.DOMImplementationRegistry;
-
-import java.awt.*;
-import java.net.CookieHandler;
 
 public class Room {
 
     private String roomName;
-    private String roomDescription;
+    private RoomName id;
     private Wall nordWand;
     private Wall suedWand;
     private Wall ostWand;
     private Wall westWand;
     private Directions focusedDirection;  // Sollte einziger parameter mit Setter Funktion sein
-    // TODO: überlegen, wie ich genau die Map implementieren will... ein multiline String villeicht ?
 
 
 /**
@@ -35,9 +32,8 @@ public class Room {
      * @param westWand Definition der Westwand
      * @param direction Enum das angibt welche Wand zu fokusieren ist
      * @param roomName Name des Raumes
-     * @param roomDescription Beschreibung des Raumes
      */
-    public Room(Wall nordWand, Wall suedWand, Wall ostWand, Wall westWand,Enum<Directions> direction, String roomName, String roomDescription){
+    public Room(Wall nordWand, Wall suedWand, Wall ostWand, Wall westWand, String roomName, RoomName id,Enum<Directions> direction){
         //Definieren der Wände
         this.nordWand = nordWand;
         this.suedWand = suedWand;
@@ -46,7 +42,7 @@ public class Room {
 
         //Eigenschaften Deklarieren
         this.roomName = roomName;
-        this.roomDescription = roomDescription;
+        this.id = id;
 
         //Festlegen der Fokusierten
         if(direction == Directions.NORTH){
@@ -62,32 +58,68 @@ public class Room {
         }
     }
 
+    /**
+     *Selber Konstruktor wie oben, nur ohne Richtungszwang
+     */
+    public Room(Wall nordWand, Wall suedWand, Wall ostWand, Wall westWand, String roomName, RoomName id){
+        //Definieren der Wände
+        this.nordWand = nordWand;
+        this.suedWand = suedWand;
+        this.ostWand = ostWand;
+        this.westWand = westWand;
+        this.id = id;
+
+
+        this.roomName = roomName;
+    }
+
     /**######################################
-     * #     Allgemeine Raumfunktionen      #
+     * #     Getter Funktionen              #
      * ######################################*/
 
-
-    // Getter functions
-    public String getRoomDescription(){
-        return roomDescription;
-    }
     public String getRoomName(){
         return roomName;
     }
     public Directions getFocusedDirection(){
         return focusedDirection;
     }
+    public Wall getFocusedWall(){
+        //Festlegen der Fokusierten
+        if(focusedDirection == Directions.NORTH){
+           return nordWand;
+
+        }else if(focusedDirection == Directions.EAST){
+            return ostWand;
+
+        }else if(focusedDirection == Directions.SOUTH){
+            return suedWand;
+        }else{
+            return westWand;
+        }
+    }
+
+    public RoomName getRoomId(){
+        return this.id;
+    }
 
 
-    // Setter functions
+
+    /**######################################
+     * #     Setter Funktionen              #
+     * ######################################*/
     public void setFocusedDirection(Directions focusedDirection){
         this.focusedDirection = focusedDirection;
     }
 
 
+    /**######################################
+     * #     Allgemeine Raumfunktionen      #
+     * ######################################*/
+
+
     /**
-     * Gibt eine Beschreibung des Ganzen Raumes
-     */
+     * Gibt eine Beschreibung des Ganzen Raumes*/
+
     public void getRoomHelp(){
         Colorlog.white(TextStorage.ROOM_LOCATION);
         Colorlog.blue(roomName);
@@ -97,28 +129,26 @@ public class Room {
         //Beschreibungen Norden
         Colorlog.green(TextStorage.DIRECTION_NORTH);
         Colorlog.cyan(TextStorage.RIGHTARROW);
-        Colorlog.white(nordWand.getWallDescription());
+        Colorlog.white(nordWand.getWallName());
         Colorlog.white(TextStorage.LINEBREAK);
 
         //Beschreibungen Osten
         Colorlog.green(TextStorage.DIRECTION_EAST);
         Colorlog.cyan(TextStorage.RIGHTARROW);
-        Colorlog.white(ostWand.getWallDescription());
+        Colorlog.white(ostWand.getWallName());
         Colorlog.white(TextStorage.LINEBREAK);
 
         //Beschreibungen Süden
         Colorlog.green(TextStorage.DIRECTION_SOUTH);
         Colorlog.cyan(TextStorage.RIGHTARROW);
-        Colorlog.white(suedWand.getWallDescription());
+        Colorlog.white(suedWand.getWallName());
         Colorlog.white(TextStorage.LINEBREAK);
 
         //Beschreibungen West
         Colorlog.green(TextStorage.DIRECTION_WEST);
         Colorlog.cyan(TextStorage.RIGHTARROW);
-        Colorlog.white(westWand.getWallDescription());
+        Colorlog.white(westWand.getWallName());
         Colorlog.white(TextStorage.LINEBREAK);
-
-
     }
 
     /**
@@ -130,16 +160,16 @@ public class Room {
         String output;
         switch (direction) {
             case NORTH:
-                output = nordWand.getWallDescription();
+                output = nordWand.getWallName();
                 break;
             case EAST:
-                output = ostWand.getWallDescription();
+                output = ostWand.getWallName();
                 break;
             case SOUTH:
-                output = suedWand.getWallDescription();
+                output = suedWand.getWallName();
                 break;
             case WEST:
-                output = westWand.getWallDescription();
+                output = westWand.getWallName();
                 break;
             default:
                 output = TextStorage.OOPS;
@@ -147,12 +177,16 @@ public class Room {
         return output;
     }
 
+
+    /**
+     //************************** Arbeiten mit der Fokusierten Wand *************************************/
+
+    /**
+     * Shows the Wallinfos of the currently focused wall
+     * @return*/
     public String wallInfos(){
         return wallInfos(this.focusedDirection);
     }
-
-
-    //************************** Arbeiten mit der Fokusierten Wand *************************************
 
 
     /***
@@ -165,14 +199,7 @@ public class Room {
 
     public void interactWithRoom(KeyWords keyword){
 
-
     }
-
-
-    /***
-     * TODO:
-     * Sauber überlegen, wie genau mit einem Raum interagiert werden kann
-     */
 
 }
 
