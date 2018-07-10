@@ -3,7 +3,6 @@ package Main.Rooms;
 public class Door {
     private Room room1;
     private Room room2;
-    private String doorName
 
     public Door(Room room1, Room room2){
         this.room1 = room1;

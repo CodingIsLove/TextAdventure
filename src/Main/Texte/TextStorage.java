@@ -61,7 +61,7 @@ public final class TextStorage {
       " Ansonsten müssen alle die Prüfungen nachholen. Und sind wütend auf mich.";
     public static final String WALL_NAME_WURST_MORITZ = "Wurst und Moritz";
     public static final String WALL_DESCRIPTION_WURST_MORITZ = "Du siehst das breite Grinsen des Wurstverkäufers. Es läuft dir das Wasser im Mund zusammen, wenn du diese deftigen Würste siehst... Ich wache wieder aus meinen Gedanken auf" +
-      " und versuche mich auf mein eigentliches Ziel zu konzentrieren. Die Prüfungen muss ich wiederfinden."
+      " und versuche mich auf mein eigentliches Ziel zu konzentrieren. Die Prüfungen muss ich wiederfinden.";
     public static final String ITEM_NAME_LINALG = "Lineare Algebra Prüfungen";
     public static final String ITEM_PURPOSE_LINALG = "Ein Stapel von Linalg Prüfungen. Leider sieht es so aus, als ob du nicht bestanden hättest";
     public static final String ITEM_LOCK_MESSAGE_LINALG = "Endlich bist du wieder hier, ich dachte meinen treusten Kunden bereits verloren zu haben. Ich habe ein Geschenk für dich! \n" +
@@ -84,10 +84,14 @@ public final class TextStorage {
 
     // WC
     public static final String WALL_NAME_WINDOW = "Fenster";
-    public static final String WALL_DESCRIPTION_WINDOW = "Aus den Fenstern des WC's kannst du nicht viel sehen. Was hast du erwartet."
+    public static final String WALL_DESCRIPTION_WINDOW = "Aus den Fenstern des WC's kannst du nicht viel sehen. Was hast du erwartet.";
     public static final String WALL_NAME_WC = "Toiletten";
     public static final String WALL_DESCRIPTION_WC = "Du schaust das WC an, welches wie aus Zauberhand die Spülung betätigt. Diese Funktionalität scheint wohl ein Bad Smell zu sein, denkst du dir.";
-    public static final String WALL_
+    public static final String WALL_NAME_SINK="Waschbecken";
+    public static final String WALL_DESCRIPTION_SINK="Dieses Waschbecken sieht ganz normal aus.... Doch warte einmal! Es scheinen einige Blätter daneben auf dem Boden zu liegen!";
+    public static final String ITEM_NAME_STATISTIK = "Statistik";
+    public static final String ITEM_DESCRIPTION_STATISTIK ="Ein Stapel von Statistikprüfungen... Anscheinend warst du in dieser Prüfung nicht schlecht, doch deine 4.5 reicht nicht aus um deine schlechte Vornote zu kompensieren";
+
 
     // Zweite Etage
     public static final String EAST_WALL_NAME_SECOND_FLOOR = "Tür";

@@ -13,20 +13,16 @@ public class Wall {
 
     private genericItem item = null;
     private Kiste box = null;
-    private String wallDescription = null;
+    private String wallDescription;
+    private String wallName;
     private Room nextRoom = null;
 
-
-    /***
-     * Generieren einer leeren Wand
-     */
-    public Wall(){}
 
     /**
      * Generieren einer Wand mit beschreibung
      * @param wallDescription beschreibt die Wand
      */
-    public Wall(String wallDescription){
+    public Wall(String wallName, String wallDescription){
         this.wallDescription = wallDescription;
     }
 
