@@ -34,26 +34,31 @@ public class AllLevels {
     //------------------------------------------- Bahnhof ----------------------------------------------------------------------------
     private static Wall nordWand_Bahnhof = new Wall(TextStorage.WALL_NAME_PLATFORM,TextStorage.WALL_DESCRIPTION_PLATFORM);
     private static Wall suedWand_Bahnhof = new Wall(TextStorage.WALL_NAME_PLATFORM,TextStorage.WALL_DESCRIPTION_PLATFORM);
-    private static Wall ostWand_Bahnhof = new Wall();
+    private static Wall ostWand_Bahnhof = new Wall(TextStorage.WALL_NAME_ESCALATOR,TextStorage.WALL_DESCRIPTION_ESCALATOR,RoomName.WELLE);
     private static Wall westWand_Bahnhof = new Wall(TextStorage.WALL_NAME_DEAD_END,TextStorage.WALL_DESCRIPTION_DEAD_END);
 
     public static Room bahnhof = new Room(nordWand_Bahnhof,suedWand_Bahnhof,ostWand_Bahnhof,westWand_Bahnhof,TextStorage.ROOM_NAME_PLATFORM,RoomName.BHF);
 
 
-
     //------------------------------------------- Welle 7 ----------------------------------------------------------------------------
     private static Wall nordWand_Welle7 = new Wall(TextStorage.WALL_NAME_GITTIG,TextStorage.WALL_DESCRIPTION_GITTTIG);
     private static Wall suedWand_Welle7 = new Wall(TextStorage.WALL_NAME_WURST_MORITZ,TextStorage.WALL_DESCRIPTION_WURST_MORITZ,wurstMoritz);
-    private static Wall ostWand_Welle7 =  new Wall(TextStorage.WALL_NAME_PLATFORM,TextStorage.WALL_DESCRIPTION_PLATFORM);
-    private static Wall westWand_Welle7 = new Wall(TextStorage.WALL_NAME_ESCALATOR,TextStorage.WALL_DESCRIPTION_ESCALATOR_REVERSE);
+    private static Wall ostWand_Welle7 =  new Wall(TextStorage.DOOR_NAME_STAIRS_EG_GANG,TextStorage.DOOR_DESCRIPTION_STAIRS_EG_GANG,RoomName.GANG1);
+    private static Wall westWand_Welle7 = new Wall(TextStorage.WALL_NAME_ESCALATOR,TextStorage.WALL_DESCRIPTION_ESCALATOR_REVERSE, RoomName.BHF);
 
     public static Room welle7 = new Room(nordWand_Welle7,suedWand_Welle7,ostWand_Welle7,westWand_Welle7,TextStorage.ROOM_NAME_WELLE7,RoomName.WELLE);
 
 
-
     //--------------------------------------------- WC  ----------------------------------------------------------------------------
 
-    public static ArrayList<Room> AllRooms = new ArrayList<>(Arrays.asList(welle7,bahnhof));
+    private static Wall nordWand_WC = new Wall();
+    private static Wall suedWand_WC = new Wall();
+    private static Wall ostWand_WC = new Wall();
+    private static Wall westWand_WC = new Wall();
+
+    public static Room wc = new Room();
+
+
 
 
 

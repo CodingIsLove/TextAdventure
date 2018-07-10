@@ -58,8 +58,8 @@ public final class TextStorage {
     public static final String WALL_NAME_ESCALATOR = "Rolltreppe" ;
     public static final String WALL_DESCRIPTION_ESCALATOR = "Du siehst wie die Rollteppe Stufe für Stufe in Richtung Welle 7 hochsteigt. Dieser Weg führt in Richtung FFHS";
 
-    // Erdgeschoss
-    public static final String ROOM_NAME_EG = "Erdgeschoss";
+    // Welle 7
+    public static final String ROOM_NAME_EG = "Welle 7";
     public static final String WALL_NAME_GITTIG ="Gittig"  ;
     public static final String WALL_DESCRIPTION_GITTTIG = "Ach herje.... wie schön Sie zu sehen! Mir ist etwas unglaubiches Passiert. Als ich rasch im Wurst und Moritz meine gratis Wurst holen wollten mit meinen 10 Stempel auf der Stempelkarte"+
       " entwendete jemand die Prüfungen aus meinem Büro. Alle Prüfungen sind Weg!!!! \n"+
@@ -77,6 +77,7 @@ public final class TextStorage {
       "Doch zuerst must du mir beantworten wie viele Stempel es benötigt um eine Sammelkarte zu füllen";
 
     public static final String WALL_DESCRIPTION_ESCALATOR_REVERSE = "Von der Welle 7 aus kannst du die Gleise sehen, welche dich zurück zum Bahnhof führen. Doch dort wirst du wahrscheinlich nichts finden.";
+    public static final String DOOR_NAME_STAIRS_EG_GANG = "Rolltreppe";
     public static final String DOOR_DESCRIPTION_STAIRS_EG_GANG = "Neben den modernen Liften der Welle 7, deren Funktionsweise dir bis heute ein Rätsel ist, siehst du das Treppenhaus welches dich in die 1. Etage führen kann";
 
 
