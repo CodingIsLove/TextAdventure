@@ -15,7 +15,7 @@ public class Wall {
     private Kiste box = null;
     private String wallDescription;
     private String wallName;
-    private RoomName nextRoom;
+    private RoomName nextRoom = null;
 
 
     /**
@@ -83,6 +83,10 @@ public class Wall {
         }else{
             return TextStorage.WALL_EMPTY;
         }
+    }
+
+    public RoomName getNextRoom(){
+         return nextRoom;
     }
 
 

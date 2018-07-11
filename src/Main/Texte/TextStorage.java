@@ -193,21 +193,30 @@ public final class TextStorage {
 
 
    //---------------------------------------- KEY WORDS -------------------------------------
-    // Interaktionen
-    public static final String HELP = "HILFE";
-    public static final String LOOK = "SCHAUE NACH";
-    public static final String INSPECT = "INSPIZIERE" ;
-    public static final String SAY = "SAGE";
-    public static final String INVENTORY = "INVENTAR";
-    public static final String USE_DOOR = "BENUTZE DIE TÜRE";
+    // Patterns
+    public static final String HELP = "HILFE.*";
+    public static final String LOOK = "SCHAUE.*";
+    public static final String INSPECT = "UNTERSUCHE.*" ;
+    public static final String SAY = "SAGE.*";
+    public static final String INVENTORY = ".*INVENTAR.*";
+    public static final String USE_DOOR = "GEHE WEITER";
     public static final String I_SEE = "WAS SEHE ICH";
-    public static final String OPEN1 = "";
+    public static final String PATTERN_GO= "GEHE.*";
+    public static final String WHERE_AM_I = "WO BIN ICH";
+    public static final String ROOM_DESCRIPTION = "RAUMBESCHREIBUNG";
 
     //Himmelsrichtungen
-    public static final String NORTH = "NORDEN" ;
-    public static final String SOUTH = "SÜDEN" ;
-    public static final String EAST = "OSTEN" ;
-    public static final String WEST = "WESTEN" ;
+    public static final String NORTH = ".*NORDEN" ;
+    public static final String SOUTH = ".*SÜDEN" ;
+    public static final String EAST = ".*OSTEN" ;
+    public static final String WEST = ".*WESTEN" ;
+
+
+    //------------------------------------- TEXT PARSING MESSAGES ---------------------------------
+    public static final String NON_VALID_EXPRESSION = "Ich verstehe den Ausdruck nicht... \nMit 'hilfe' kannst du nochmals die Kommandos nachschauen";
+    public static final String NO_DOOR_HERE ="An der Wand, die du Betrachtest gibt es keine Türe";
+    public static final String CHANGED_ROOM = "Du hast den Raum gewechselt und bist nun hier --> ";
+    public static final String VIEW = "Dein Blick fällt nach: ";
     //TODO: WHO AM I?
     //TODO: Mission
     //TODO: InputSyntax definieren

@@ -21,6 +21,8 @@ public class PlayMe {
         InputParser parser = new InputParser(chris);
         Scanner scanner = new Scanner(System.in);
 
+
+
         /**
          * Prolog des Spieles*/
         System.out.println(TextStorage.PROLOG);
@@ -29,18 +31,17 @@ public class PlayMe {
          * In diesem Loop läuft das spiel
          */
         while (game_not_completed){
-            System.out.println();
             String word = scanner.nextLine();
-            System.out.println("Das eingegebene Wort war: " + word);
             parser.evaluate(word);
 
 
-            //check if hero has all items
-            if(chris.getInventar().contains(linalg)&&chris.getInventar().contains(statistik)&&chris.getInventar().contains(gti)){
+            //Beende das Spiel, wenn alle Prüfungen gefunden wurden und du dich im Büro befindest
+            if(chris.getInventar().contains(linalg)&&chris.getInventar().contains(statistik)&&chris.getInventar().contains(gti)&&chris.getAktuellerRaum()== AllLevels.office){
                 System.out.println(TextStorage.EPILOG);
                 game_not_completed = false;
             }
 
+            // Ein wenig mehr Abstand
             System.out.println();
         }
     }
