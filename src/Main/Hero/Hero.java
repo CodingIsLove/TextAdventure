@@ -3,6 +3,7 @@ package Main.Hero;
 import Main.Items.Inventar;
 import Main.Items.genericItem;
 import Main.Rooms.BuildingBlocks.Room;
+import Main.Rooms.BuildingBlocks.Wall;
 import Main.TextParser.Colorlog;
 import Main.Texte.TextStorage;
 
@@ -15,6 +16,7 @@ public class Hero {
     private int frustrationsLimit = 0;
     private Inventar inventar;
     private Room aktuellerRaum;
+    private Wall focusedWall;
 
     //TODO überlegen, ob das frustrationslimit überaupt noch implementierbar ist
     //TODO add the current map
@@ -30,6 +32,7 @@ public class Hero {
     public Hero(String name, Room start){
         this.name = name;
         this. aktuellerRaum = start;
+        this.focusedWall = start.getFocusedWall();
     }
 
     /**####################
