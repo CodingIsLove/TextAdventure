@@ -1,5 +1,6 @@
 package Main.Hero;
 
+import Main.Enums.Directions;
 import Main.Items.Inventar;
 import Main.Items.genericItem;
 import Main.Rooms.BuildingBlocks.Room;
@@ -31,6 +32,11 @@ public class Hero{
      */
 
     public void changeRoom(){
+        this.aktuellerRaum = aktuellerRaum.getFocusedWall().useDoor();
+    }
+
+    public void changeRoom(Directions direction){
+        aktuellerRaum.setFocusedDirection(direction);
         this.aktuellerRaum = aktuellerRaum.getFocusedWall().useDoor();
     }
 

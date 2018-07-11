@@ -41,7 +41,7 @@ public class InputParser {
     Pattern inspect = Pattern.compile(TextStorage.INSPECT);
     Pattern say = Pattern.compile(TextStorage.SAY);
     Pattern inventory = Pattern.compile(TextStorage.INVENTORY);
-    Pattern use_door = Pattern.compile(TextStorage.USE_DOOR);
+    Pattern use_door = Pattern.compile(TextStorage.PATTERN_GO);
     Pattern i_see = Pattern.compile(TextStorage.I_SEE);
     Pattern where_am_i = Pattern.compile(TextStorage.WHERE_AM_I);
     Pattern room = Pattern.compile(TextStorage.ROOM_DESCRIPTION);
@@ -100,10 +100,20 @@ public class InputParser {
          * Die Türe verwenden
          */
         if(use_door.matcher(command).matches()){
-            if(hero.getAktuellerRaum().getFocusedWall().getNextRoom() == null){
-                System.out.println(TextStorage.NO_DOOR_HERE);
+            if(north.matcher(command).matches()){
+                hero.changeRoom(Directions.NORTH);
+                System.out.println(TextStorage.CHANGED_ROOM + hero.getAktuellerRaum().getRoomName());
+            }else if(east.matcher(command).matches()){
+                hero.changeRoom(Directions.EAST);
+                System.out.println(TextStorage.CHANGED_ROOM + hero.getAktuellerRaum().getRoomName());
+            }else if(south.matcher(command).matches()){
+                hero.changeRoom(Directions.SOUTH);
+                System.out.println(TextStorage.CHANGED_ROOM + hero.getAktuellerRaum().getRoomName());
+            }else if(west.matcher(command).matches()){
+                hero.changeRoom(Directions.WEST);
+                System.out.println(TextStorage.CHANGED_ROOM + hero.getAktuellerRaum().getRoomName());
             }else{
-                hero.changeRoom();
+                System.out.println(TextStorage.NO_DOOR_HERE);
                 System.out.println(TextStorage.CHANGED_ROOM + hero.getAktuellerRaum().getRoomName());
             }
         }
@@ -122,10 +132,9 @@ public class InputParser {
          * Gibt Auskunft übe den Aktuellen Raum
          */
         if(where_am_i.matcher(command).matches()){
-            System.out.println(TextStorage.ROOM_LOCATION + Colorlog.blue(hero.getAktuellerRaum().getRoomName()));
+            System.out.println(Colorlog.white(TextStorage.ROOM_LOCATION) + Colorlog.blue(hero.getAktuellerRaum().getRoomName()));
             System.out.println(Colorlog.white(TextStorage.VIEW) + Colorlog.blue(hero.getAktuellerRaum().getFocusedWall().getWallName()));
         }
-
 
 
     }

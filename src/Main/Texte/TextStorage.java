@@ -199,7 +199,6 @@ public final class TextStorage {
     public static final String INSPECT = "UNTERSUCHE.*" ;
     public static final String SAY = "SAGE.*";
     public static final String INVENTORY = ".*INVENTAR.*";
-    public static final String USE_DOOR = "GEHE WEITER";
     public static final String I_SEE = "WAS SEHE ICH";
     public static final String PATTERN_GO= "GEHE.*";
     public static final String WHERE_AM_I = "WO BIN ICH";

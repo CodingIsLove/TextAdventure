@@ -238,15 +238,5 @@ public class Room {
         }
         return output;
     }
-
-
-    /**
-     * ************************* Arbeiten mit einer Richtung **************************************/
-
-
-    /**
-     //************************** Arbeiten mit der Fokusierten Wand ********************************/
-
-
 }
 
