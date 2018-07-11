@@ -197,12 +197,14 @@ public final class TextStorage {
     public static final String HELP = "HILFE.*";
     public static final String LOOK = "SCHAUE.*";
     public static final String INSPECT = "UNTERSUCHE.*" ;
-    public static final String SAY = "SAGE.*";
+    public static final String SAY = "REDE.*";
     public static final String INVENTORY = ".*INVENTAR.*";
     public static final String I_SEE = "WAS SEHE ICH";
     public static final String PATTERN_GO= "GEHE.*";
     public static final String WHERE_AM_I = "WO BIN ICH";
     public static final String ROOM_DESCRIPTION = "RAUMBESCHREIBUNG";
+    public static final String INTERACT = "INTERAGIERE.*";
+    public static final String CODE_INPUT = ".*[0-9]+";
 
     //Himmelsrichtungen
     public static final String NORTH = ".*NORDEN" ;

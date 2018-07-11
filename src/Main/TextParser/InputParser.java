@@ -45,10 +45,16 @@ public class InputParser {
     Pattern i_see = Pattern.compile(TextStorage.I_SEE);
     Pattern where_am_i = Pattern.compile(TextStorage.WHERE_AM_I);
     Pattern room = Pattern.compile(TextStorage.ROOM_DESCRIPTION);
+    Pattern interact = Pattern.compile(TextStorage.INTERACT);
+    Pattern codeEnding = Pattern.compile(TextStorage.CODE_INPUT);
 
 
-
-
+    /**
+     * Diese Funktion ist der Kern diese Klasse. Ein String wird auf unterschiedliche Regexpattern geprüft.
+     * Erfüllt ein String ein bestimmtes Pattern, so wird der Held modifiziert und der Raum und die aktuellen
+     * Parameter ändern sich
+     * @param command Ausdruck, welcher zu analysieren ist
+     */
     public void evaluate(String command){
 
         command = command.toUpperCase();
@@ -119,7 +125,6 @@ public class InputParser {
         }
 
 
-
         /**
          * Beschreibe, was ich gerade sehe
          */
@@ -137,6 +142,24 @@ public class InputParser {
         }
 
 
+        /**
+         * interaktion mit einer Wand
+         */
+        if(interact.matcher(command).matches() || say.matcher(command).matches()){
+
+            System.out.println("Habe verstanden");
+            //Checken, ob code mitgegeben wird oder nicht
+            if(codeEnding.matcher(command).matches()){
+                hero.openKiste(Integer.parseInt(command.replaceAll("[^\\d]",""))); //TODO: somehow i have to get the number at the end of the string
+            }else{
+                hero.openKiste();
+            }
+        }
+
+
+        if(inventory.matcher(command).matches()){
+            hero.logInventar();
+        }
     }
 
 
