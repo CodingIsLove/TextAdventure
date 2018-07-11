@@ -16,15 +16,15 @@ public class AllLevels {
      * ###############
      * #  OBJEKTE    #
      * ###############*/
-    private static genericItem linalg = new genericItem(TextStorage.ITEM_NAME_LINALG,TextStorage.ITEM_PURPOSE_LINALG);
-    private static genericItem statistik = new genericItem(TextStorage.ITEM_NAME_STATISTIK,TextStorage.ITEM_DESCRIPTION_STATISTIK);
-    private static genericItem gti  = new genericItem(TextStorage.ITEM_NAME_GTI,TextStorage.ITEM_DESCRIPTION_GTI);
+    public static genericItem linalg = new genericItem(TextStorage.ITEM_NAME_LINALG,TextStorage.ITEM_PURPOSE_LINALG);
+    public static genericItem statistik = new genericItem(TextStorage.ITEM_NAME_STATISTIK,TextStorage.ITEM_DESCRIPTION_STATISTIK);
+    public static genericItem gti  = new genericItem(TextStorage.ITEM_NAME_GTI,TextStorage.ITEM_DESCRIPTION_GTI);
 
     /**
      * ###############
      * #  Kisten    #
      * ###############*/
-    private static Kiste wurstMoritz = new Kiste(TextStorage.WALL_NAME_WURST_MORITZ,TextStorage.WALL_DESCRIPTION_WURST_MORITZ,TextStorage.WALL_OPEN_MESSAGE_WURST_MORITZ,TextStorage.WALL_EMPTY_MESSAGE_WURST_MORITZ,linalg, TextStorage.TEST_DENY_BOX_ACCESS,TextStorage.wurstCode);
+    private static Kiste wurstMoritz = new Kiste(TextStorage.WALL_NAME_WURST_MORITZ,TextStorage.WALL_DESCRIPTION_WURST_MORITZ,TextStorage.WALL_OPEN_MESSAGE_WURST_MORITZ,TextStorage.WALL_EMPTY_MESSAGE_WURST_MORITZ,linalg, TextStorage.WALL_DENY_MESSAGE_WURST_MORITZ,TextStorage.wurstCode);
     private static Kiste handtuchSpender = new Kiste(TextStorage.BOX_NAME_HANDTUCH,TextStorage.BOX_DESCRIPTION_HANDTUCH,TextStorage.BOX_OPEN_MESSAGE,TextStorage.BOX_EMPTY_MESSAGE,statistik);
     private static Kiste pult = new Kiste(TextStorage.EAST_WALL_NAME_STUDY_ROOM,TextStorage.BOX_DESCRIPTION_PULT,TextStorage.BOX_OPEN_MESSAGE_PULT,TextStorage.BOX_EMPTY_MESSAGE_PULT,gti);
 

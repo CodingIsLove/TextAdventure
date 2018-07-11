@@ -48,6 +48,8 @@ public class AllLevelsTest {
         currentRoom = currentRoom.getFocusedWall().useDoor();
         assertEquals(AllLevels.bahnhof.getRoomName(),currentRoom.getRoomName());
 
+        currentRoom.getRoomHelp();
+
         // Durchgang 1Etage
         currentRoom = AllLevels.welle7;
         currentRoom.setFocusedDirection(Directions.EAST);

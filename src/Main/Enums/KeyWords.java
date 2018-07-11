@@ -12,8 +12,8 @@ public enum KeyWords {
      * HELP [<WALLNAME>|<DIRECTION>|<Kiste>]          --> Verwenden für allgemeine Hilfe, oder für Hilfe zu Objekten oder Richtunge
      * TAKE <genericObject>                           --> Verwenden für Objekte im Raum oder Objekte in Kisten
      * OPEN <Kiste>                                   --> Verwenden für Verschlüsselt|Unverschlüsselte Kiste
-     * TALK <Person>                                  --> Verwenden um mit einer Person zu interagieren TODO: schreiben einer Personklasse
-     * LOOK <Direction>                               --> Verwenden für Raum
+     * TALK <Person>                                  --> Verwenden um mit einer Person zu interagieren
+     * * LOOK <Direction>                               --> Verwenden für Raum
      * USE <inventarObject> for  <genericObject>      -->
      * PUT <genericObject> in <Kiste>
      */

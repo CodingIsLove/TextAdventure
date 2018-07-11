@@ -7,13 +7,14 @@ public final class TextStorage {
     public static final String LINEBREAK = " \n";
     public static final String RIGHTARROW = "---> ";
     public static final String OOPS = "Oops! Da ist etwas fehlgeschlagen!";
+    public static final String NO_INTERACTION = "Du kannst hier keine Interaktion tätigen";
     public static int  wurstCode= 10;
 
     //ITEMS
     public static final String ITEM_PURPOSE = "Hmmm ich weiss nicht, wozu ich diesen Gegenstand verwenden kann.";
 
     //INVENTORY
-    public static final String EMPTY_INVENTORY = "Es befindet sich nicht in deinem Inventar!";
+    public static final String EMPTY_INVENTORY = "Es befindet sich nichts in deinem Inventar!";
     public static final String INVENTORY_START_MESSAGE = "Dein Inventar besteht aus: \n";
     public static final String INVENTORY_DESCRIPTION = "Beschreibung: ";
 
@@ -84,7 +85,7 @@ public final class TextStorage {
     // 1.Etage
     public static final String ROOM_NAME_GANG1 = "1. Etage";
     public static final String WALL_NAME_STAIRS = "Treppe";
-    public static final String EAST_WALL_DESCRIPTION_FIRST_FLOOR = "Schonwieder Treppen! Diese führen dich zur zweiten Etage.";
+    public static final String EAST_WALL_DESCRIPTION_FIRST_FLOOR = "Schon wieder Treppen! Diese führen dich zur zweiten Etage.";
     public static final String WEST_WALL_DESCRIPTION_FIRST_FLOOR = "Die Treppen hinunter befindet sich das Erdgeschoss mit den vielen Essensständen der Welle 7.";
     public static final String SOUTH_WALL_NAME_FIRST_FLOOR = "Lounge";
     public static final String SOUTH_WALL_DESCRIPTION_FIRST_FLOOR = "Ausgefallene Möbel. Das muss wohl eine der vielen Lounges von diesem Gebäude sein!";
@@ -178,5 +179,4 @@ public final class TextStorage {
     public static final String TEST_OPEN_MESSAGE = "Die Kiste wurde geöffnet";
     public static final String TEST_DENY_BOX_ACCESS = " UUppps, die Kiste scheint verschlossen zu sein. Kannst du sie öffnen?";
     public static final String TEST_EMPTY_MESSAGE = "Du hast die Kiste bereits geleert. Mehr gibts nicht";
-
 }

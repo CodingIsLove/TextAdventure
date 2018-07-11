@@ -47,6 +47,7 @@ public class Kiste {
     public Kiste(String name, String boxDescription,String openMessage, String emptyMessage, genericItem item,String denyBoxAccess, int code){
 
         this.item = item;
+        this.emptyMessage = emptyMessage;
         this.denyBoxAccess = denyBoxAccess;
         this.code = null;
         this.isLocked = true;
@@ -77,12 +78,12 @@ public class Kiste {
 
         //Falls Kiste verschlossen ist, dann gib nichts zurück
         if(isLocked){
-            System.out.println(Colorlog.red(boxName +" " + denyBoxAccess));
+            System.out.println(Colorlog.red(boxName +": " + denyBoxAccess));
             return null;
         }else {
             //Falls kein Gegenstand mehr in der Kiste ist
-            if (item == null) {
-                System.out.println(emptyMessage);
+            if (this.item == null) {
+                System.out.println(Colorlog.white(emptyMessage));
                 return null;
             } else {
                 // Falls ein Gegenstand in der Kiste ist, wird dieser zurückgegeben

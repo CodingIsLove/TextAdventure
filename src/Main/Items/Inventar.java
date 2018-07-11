@@ -24,9 +24,6 @@ public class Inventar {
         inventar.add(item);
     }
 
-
-    //TODO use item
-
     /***
      * Beschreibung eines gesuchten  Elementes aus dem Inventar
      * @param itemName der Name des Items
@@ -51,10 +48,12 @@ public class Inventar {
             System.out.println(TextStorage.INVENTORY_START_MESSAGE);
 
             for(genericItem item : inventar){
-                System.out.print(Colorlog.yellow(TextStorage.LINE_FILLER) );
-                System.out.println(item.getItemName());
-                System.out.println(Colorlog.white(TextStorage.INVENTORY_DESCRIPTION +item.getDescription()));
-                System.out.println();
+                if(item != null) {
+                    System.out.print(Colorlog.yellow(TextStorage.LINE_FILLER));
+                    System.out.println(item.getItemName());
+                    System.out.println(Colorlog.white(TextStorage.INVENTORY_DESCRIPTION + item.getDescription()));
+                    System.out.println();
+                }
             }
         }
     }

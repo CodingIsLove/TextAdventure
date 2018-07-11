@@ -3,6 +3,8 @@ package Main.Rooms.BuildingBlocks;
 import Main.Enums.Directions;
 import Main.Enums.KeyWords;
 import Main.Enums.RoomName;
+import Main.Items.Kiste;
+import Main.Items.genericItem;
 import Main.Rooms.AllLevels;
 import Main.TextParser.Colorlog;
 import Main.Texte.TextStorage;
@@ -95,11 +97,78 @@ public class Room {
             return westWand;
         }
     }
-
     public RoomName getRoomId(){
         return this.id;
     }
 
+
+    /**
+     *     ######################
+     *     #    Looking         #
+     *     ######################
+     * */
+    public void look(Directions direction){
+        this.setFocusedDirection(direction);
+        this.look();
+    }
+
+    public void look(){
+        if(this.getFocusedWall().getBox() != null){
+            System.out.println(this.getFocusedWall().getBoxName());
+        }else {
+            System.out.println(this.getFocusedWall().getWallName());
+        }
+    }
+
+
+
+    /**
+     *     ######################
+     *     #    inspecting      #
+     *     ######################
+     * */
+    public void inspect(Directions direction){
+        this.setFocusedDirection(direction);
+        this.inspect();
+    }
+
+    public void inspect(){
+        if(this.getFocusedWall().getBox() != null) {
+            System.out.println(this.getFocusedWall().getBoxDescription());
+        }else {
+            System.out.println(this.getFocusedWall().getWallDescription());
+        }
+    }
+
+
+    /**
+     *     ######################
+     *     #    interacting     #
+     *     ######################
+     * */
+
+
+    public void interact(){
+
+    }
+
+
+    public genericItem openKiste(){
+        if(this.getFocusedWall().getBox() != null){
+            return this.getFocusedWall().getBox().openKiste();
+        }else{
+            System.out.println(TextStorage.NO_INTERACTION);
+            return null;
+        }
+    }
+
+    public genericItem openKiste(int code){
+        if(this.getFocusedWall().getBox() != null){
+            return this.getFocusedWall().getBox().openKiste(code);
+        }else{
+            return null;
+        }
+    }
 
 
     /**######################################
@@ -172,27 +241,12 @@ public class Room {
 
 
     /**
-     //************************** Arbeiten mit der Fokusierten Wand *************************************/
+     * ************************* Arbeiten mit einer Richtung **************************************/
+
 
     /**
-     * Shows the Wallinfos of the currently focused wall
-     * @return*/
-    public String wallInfos(){
-        return wallInfos(this.focusedDirection);
-    }
+     //************************** Arbeiten mit der Fokusierten Wand ********************************/
 
-
-    /***
-     * interactWithWall ist eine weitläufige Funktion. Sie unterscheidet, bei den unterschiedlichen Wänden
-     * und führt die auf die Wand passende Funktion aus.
-     */
-    public void interactWithWall(){
-
-    }
-
-    public void interactWithRoom(KeyWords keyword){
-
-    }
 
 }
 

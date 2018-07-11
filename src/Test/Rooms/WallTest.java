@@ -70,12 +70,4 @@ public class WallTest {
 
     }
 
-    @Test
-    public void getDoor() {
-        //TODO: write Test, when door is here
-    }
-
-
-
-    //----------- Testing with Door
 }

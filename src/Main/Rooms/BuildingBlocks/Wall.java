@@ -9,7 +9,6 @@ import Main.Texte.TextStorage;
 
 /***
  * Die Klasse Wall kann unterschiedliche Objekte besitzen. Es kann sein, dass sie gar nichts hat, eine Tür oder eine Kiste besitzt
- * //TODO weitere Objekte hinzufügen, falls nötig
  */
 
 public class Wall {
@@ -54,7 +53,7 @@ public class Wall {
      */
     public Wall(String doorName,String doorDescription, RoomName nextRoom){
         this.wallDescription = doorDescription;
-        this.wallName = wallDescription;
+        this.wallName = doorName;
         this.nextRoom = nextRoom;
     }
 
@@ -95,8 +94,16 @@ public class Wall {
          return box.getKistenDescription();
     }
     public genericItem openBox(){
-         return box.openKiste();
+         if(box != null){
+             return box.openKiste();
+         }else{
+             System.out.println(TextStorage.NO_INTERACTION);
+             return null;
+         }
+    }
 
+    public Kiste getBox(){
+            return box;
     }
     public genericItem openBox(int code){
         return box.openKiste(code);
