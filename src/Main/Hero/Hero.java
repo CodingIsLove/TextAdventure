@@ -7,11 +7,11 @@ import Main.Rooms.BuildingBlocks.Wall;
 import Main.TextParser.Colorlog;
 import Main.Texte.TextStorage;
 
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 public class Hero{
 
-    private String name;
     private Inventar inventar;
     private Room aktuellerRaum;
 
@@ -20,8 +20,7 @@ public class Hero{
      * #    Konstruktor    #
      * #####################
      */
-    public Hero(String name, Room start){
-        this.name = name;
+    public Hero(Room start){
         this. aktuellerRaum = start;
         this.inventar = new Inventar();
     }
@@ -50,16 +49,18 @@ public class Hero{
     public Room getAktuellerRaum(){
         return aktuellerRaum;
     }
-    public void getInventar(){
-        inventar.getInventar();
+    public void logInventar(){
+        inventar.logInventar();
     }
-    public String getName(){
-        return name;
+
+    public ArrayList<genericItem> getInventar(){
+        return inventar.getInventar();
     }
+
 
     /**
      * ################################
      * #    Help functions            #
-     * ################################
+     * ################################ // TODO: schreiben der Help functions
      */
 }

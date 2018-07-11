@@ -10,10 +10,10 @@ public class HeroTest {
     @Test
     public void changeRoom() {
 
-        Hero chris = new Hero("Christopher",AllLevels.bahnhof);
+        Hero chris = new Hero(AllLevels.bahnhof);
 
         // Hier sollte kein Inventar sein
-        chris.getInventar();
+        chris.logInventar();
         chris.getAktuellerRaum().getRoomHelp();
         chris.getAktuellerRaum().look(Directions.EAST);
         chris.changeRoom();
@@ -28,15 +28,8 @@ public class HeroTest {
         chris.openKiste(10);
 
         // Null sollte das inventar die Linalgprüfungen haben
-        chris.getInventar();
+        chris.logInventar();
 
     }
 
-    @Test
-    public void getInventar() {
-    }
-
-    @Test
-    public void getInventarOverview() {
-    }
 }

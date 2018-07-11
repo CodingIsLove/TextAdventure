@@ -33,7 +33,7 @@ public class InventarTest {
         inventar.addItem(key);
 
         System.out.println("------------ Get All Inventar Ausgabe ");
-        inventar.getInventar();
+        inventar.logInventar();
     }
 
     @Test

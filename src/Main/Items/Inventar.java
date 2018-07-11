@@ -41,7 +41,7 @@ public class Inventar {
     /**
      * Ausgabe des Inventares
      */
-    public void getInventar(){
+    public void logInventar(){
         if(inventar.size() == 0){
             System.out.println(Colorlog.red(TextStorage.EMPTY_INVENTORY));
         }else{
@@ -56,5 +56,10 @@ public class Inventar {
                 }
             }
         }
+    }
+
+
+    public ArrayList<genericItem> getInventar(){
+        return inventar;
     }
 }

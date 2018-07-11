@@ -2,6 +2,11 @@ package Main.Texte;
 
 public final class TextStorage {
 
+
+    //PROLOG UND EPILOG
+    public static final String PROLOG = "Hier kommt noch ein PrologText"; //TODO: finde einen guten Intro Text
+    public static final String EPILOG = "Hier kommt noch ein EpilogText"; //TODO: finde einen guten Epilog Text
+
     //MISC
     public static final String LINE_FILLER = "*** ";
     public static final String LINEBREAK = " \n";
@@ -168,7 +173,7 @@ public final class TextStorage {
 
 
 
-    //----------------------------------- Testing ------------------------------------------
+    //----------------------------------- TESTING  ------------------------------------------
     public static final String TEST_WALL_DESCRIPTION = "Herzlich willkommen bei Wurst und Moritz Ich habe ein Geschenk für sie wollen sie es öffnen?";
     public static final String TEST_WALL_NAME = "Wurst und Moritz";
     public static final String TEST_ITEM_NAME ="Linalg Prüfungen";
@@ -179,4 +184,39 @@ public final class TextStorage {
     public static final String TEST_OPEN_MESSAGE = "Die Kiste wurde geöffnet";
     public static final String TEST_DENY_BOX_ACCESS = " UUppps, die Kiste scheint verschlossen zu sein. Kannst du sie öffnen?";
     public static final String TEST_EMPTY_MESSAGE = "Du hast die Kiste bereits geleert. Mehr gibts nicht";
+
+
+
+
+    //--------------------------------------- HELP MESSAGE ---------------------------------------
+
+
+
+   //---------------------------------------- KEY WORDS -------------------------------------
+    // Interaktionen
+    public static final String HELP = "HILFE";
+    public static final String LOOK = "SCHAUE NACH";
+    public static final String INSPECT = "INSPIZIERE" ;
+    public static final String SAY = "SAGE";
+    public static final String INVENTORY = "INVENTAR";
+    public static final String USE_DOOR = "BENUTZE DIE TÜRE";
+    public static final String I_SEE = "WAS SEHE ICH";
+    public static final String OPEN1 = "";
+
+    //Himmelsrichtungen
+    public static final String NORTH = "NORDEN" ;
+    public static final String SOUTH = "SÜDEN" ;
+    public static final String EAST = "OSTEN" ;
+    public static final String WEST = "WESTEN" ;
+    //TODO: WHO AM I?
+    //TODO: Mission
+    //TODO: InputSyntax definieren
+    //TODO:
+
+
+
+
+
+
+
 }
