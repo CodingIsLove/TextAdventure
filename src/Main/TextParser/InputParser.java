@@ -1,8 +1,12 @@
 package Main.TextParser;
 import Main.Enums.Directions;
+import Main.Graphics.Graphics;
 import Main.Hero.Hero;
 import Main.Texte.TextStorage;
 
+import java.io.*;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
 import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Pattern;
@@ -26,6 +30,19 @@ public class InputParser {
         this.hero = hero;
     }
 
+
+    public static void fileReader(String fileDestination) throws FileNotFoundException {
+        try (BufferedReader br = new BufferedReader(new FileReader(fileDestination))) {
+            String line = null;
+            while ((line = br.readLine()) != null) {
+                System.out.println(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
     /**
      * ###############################
      * #    REGEX PATTERN            #
@@ -41,12 +58,13 @@ public class InputParser {
     Pattern inspect = Pattern.compile(TextStorage.INSPECT);
     Pattern say = Pattern.compile(TextStorage.SAY);
     Pattern inventory = Pattern.compile(TextStorage.INVENTORY);
-    Pattern use_door = Pattern.compile(TextStorage.PATTERN_GO);
     Pattern i_see = Pattern.compile(TextStorage.I_SEE);
     Pattern where_am_i = Pattern.compile(TextStorage.WHERE_AM_I);
     Pattern room = Pattern.compile(TextStorage.ROOM_DESCRIPTION);
     Pattern interact = Pattern.compile(TextStorage.INTERACT);
     Pattern codeEnding = Pattern.compile(TextStorage.CODE_INPUT);
+    Pattern map = Pattern.compile(TextStorage.MAP);
+    Pattern manual = Pattern.compile(TextStorage.MANUAL);
 
 
     /**
@@ -55,7 +73,7 @@ public class InputParser {
      * Parameter ändern sich
      * @param command Ausdruck, welcher zu analysieren ist
      */
-    public void evaluate(String command){
+    public void evaluate(String command) throws FileNotFoundException {
 
         command = command.toUpperCase();
 
@@ -105,7 +123,7 @@ public class InputParser {
         /**
          * Die Türe verwenden
          */
-        if(use_door.matcher(command).matches()){
+        if(go_somewhere.matcher(command).matches()){
             if(north.matcher(command).matches()){
                 hero.changeRoom(Directions.NORTH);
                 System.out.println(TextStorage.CHANGED_ROOM + hero.getAktuellerRaum().getRoomName());
@@ -147,22 +165,42 @@ public class InputParser {
          */
         if(interact.matcher(command).matches() || say.matcher(command).matches()){
 
-            System.out.println("Habe verstanden");
-            //Checken, ob code mitgegeben wird oder nicht
             if(codeEnding.matcher(command).matches()){
-                hero.openKiste(Integer.parseInt(command.replaceAll("[^\\d]",""))); //TODO: somehow i have to get the number at the end of the string
+                hero.openKiste(Integer.parseInt(command.replaceAll("[^\\d]","")));
             }else{
                 hero.openKiste();
             }
         }
 
 
-        if(inventory.matcher(command).matches()){
+        /**
+         * Anzeigen des Inventars
+         */
+        if(inventory.matcher(command).matches()) {
             hero.logInventar();
         }
+
+
+        /**
+         * Anzeigen der Karte
+         */
+        if(map.matcher(command).matches()){
+            Graphics.printWorld();
+        }
+
+        /**
+         * Hilfe anzeigen
+         */
+
+        if(help.matcher(command).matches()){
+            if(manual.matcher(command).matches()){
+                InputParser.fileReader("/home/ros4/Desktop/TextAdventure/src/Main/Texte/SpielAnleitung.txt");
+            }else{
+                InputParser.fileReader("/home/ros4/Desktop/TextAdventure/src/Main/Texte/help.txt");
+
+            }
+        }
     }
-
-
 
 
 

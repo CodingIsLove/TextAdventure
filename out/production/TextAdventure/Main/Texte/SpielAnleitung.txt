@@ -1,0 +1,16 @@
+
+Willkommen bei "GITTIG" das Spiel.
+
+In diesem Spiel hat dein Studiengangsleiter die Prüfungen seiner Schüler in der Welle 7 in Bern verloren.
+Er ist vollkommen verzweifelt und weiss nicht mehr, was er tun soll. Als vorbildlicher Student, wie du
+es bist, versuchst du Gittig zu helfen. Du erforscht die Welle 7 und suchst nach den 3 verlorenen Prüfungen.
+
+    *Lineare Algebra
+    *GTI
+    *Statistik
+
+Finde alle Prüfungen und bringe sie Gittig im Büro der FFHS vorbei, damit er seinen Job als Studiengangsleiter behalten kann.
+
+Viel Spass beim Spiele wünschen euch die Entwickler:
+  ---> Christopher Germann
+  ---> Benjamin Wyss

@@ -69,4 +69,10 @@ public class Hero{
      * #    Help functions            #
      * ################################ // TODO: schreiben der Help functions
      */
+
+
+
+
+
+
 }

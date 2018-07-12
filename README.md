@@ -1,9 +1,10 @@
 
-# Abenteuer der verlorenen Abschlussprüfungen
+# Gittig
+## Die Sage der verlorenen Abschlussprüfungen
 
-## Todo
-* Schreiben eines Wakltrough
-* Schreiben des Textparsers
-* Einfacher Sprachparser schreiben
-* Erstes Level erstellen
-* Json mit allen Strings sollte erstellt werden! Hardcoding Strings ist Bad Smell
+Du studierst an der FFHS in Bern und hast deine Semesterendprüfungen seit 2 Monaten hinter dir. Die Prüfungsergebnisse hätten
+vor 2 Tagen online gestellt werden sollen. Seltsam, was ist da geschehen?! In "Gittig" versuchts du herauszufinden, was mit deinen 
+Prüfungsresultaten geschehen ist und ob du das letzte Semester bestanden hast oder nicht. Wende dein Verstand an und Löse 
+das Rätzsel um die verlorenen Prüfungen.
+
+

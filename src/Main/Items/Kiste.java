@@ -78,7 +78,8 @@ public class Kiste {
 
         //Falls Kiste verschlossen ist, dann gib nichts zurück
         if(isLocked){
-            System.out.println(Colorlog.red(boxName +": " + denyBoxAccess));
+            System.out.print(Colorlog.red(boxName +": " + denyBoxAccess));
+            System.out.println(Colorlog.white(""));
             return null;
         }else {
             //Falls kein Gegenstand mehr in der Kiste ist
@@ -88,7 +89,8 @@ public class Kiste {
             } else {
                 // Falls ein Gegenstand in der Kiste ist, wird dieser zurückgegeben
                 genericItem item = this.item;
-                System.out.println(Colorlog.yellow(TextStorage.GET_ITEM_START+ item.getItemName() + TextStorage.GET_ITEM_END));
+                System.out.print(Colorlog.yellow(TextStorage.GET_ITEM_START+ item.getItemName() + TextStorage.GET_ITEM_END));
+                System.out.println(Colorlog.white(""));
                 this.item = null;
                 return item;
             }

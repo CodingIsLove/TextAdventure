@@ -1,0 +1,23 @@
+#########
+# HILFE #
+#########
+
+[]    := optionale Argumente
+<...> := Verwende ein Keyword der Liste ...
+a|b|c := Nimm entweder a ODER b ODER c  (XOR!)
+
+----------------------------------------------------------------------------------------------------------------------------------
+|Befehl             | Argumente       | Beschreibung                                                                             |
+----------------------------------------------------------------------------------------------------------------------------------
+|Schaue             |  [<Richtung>]   | Schaue und fokusiere eine Wand. Ohne Argumente fokusiert es die bereits fokusierte Wand  |
+|Beschreibe         |  [<Richtung>]   | Beschreibe eine Richtung. Ohne Argument beschreibt es die fokusierte Richtung            |
+|Raumbeschreibung|  |     keine       | Gibt eine Raumübersicht                                                                  |
+|Gehe               |  [<Richtung>]   | Gehe in den nächsten Raum in Richtung <Richtung>.                                        |
+|Hilfe              |  [Anleitung ]   | Hilfe= dieser Bildschirm,  Hilfe Anleitung= Gennauere Spielanleitung                     |
+|Wo bin ich         |     keine       | Gibt den aktuellen Ort und die fokusierte Wand zurück                                    |
+|Inventar           |     keine       | Zeigt dein aktuelles Inventar an                                                         |
+|Karte              |     keine       | Zeigt die Karte des ganzen Spieles                                                       |
+|Was sehe ich       |     keine       | Gibt die fokusierte wand zurück                                                          |
+|Interagiere        |    [Zahl]       | Interagiere mit der fokusierten Wand. Dies ist nur möglich, wenn was verdächtig erscheint|
+----------------------------------------------------------------------------------------------------------------------------------
+<Richtung> := Norden,Osten,Süden,Westen]

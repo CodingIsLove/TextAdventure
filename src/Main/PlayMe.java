@@ -1,10 +1,13 @@
 package Main;
 
+import Main.Graphics.Graphics;
 import Main.Hero.Hero;
+import Main.Items.Inventar;
 import Main.Rooms.AllLevels;
 import Main.TextParser.InputParser;
 import Main.Texte.TextStorage;
 
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 import static Main.Rooms.AllLevels.gti;
@@ -13,7 +16,7 @@ import static Main.Rooms.AllLevels.statistik;
 
 public class PlayMe {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
 
         // Erstellen der benötigten Instanzen
         boolean game_not_completed = true;
@@ -21,11 +24,11 @@ public class PlayMe {
         InputParser parser = new InputParser(chris);
         Scanner scanner = new Scanner(System.in);
 
-
-
         /**
          * Prolog des Spieles*/
-        System.out.println(TextStorage.PROLOG);
+        Graphics.titleScreen();
+        //TODO: Pfad unbedingt anpassen, sonst läuft es nicht auf allen Systemen
+        InputParser.fileReader("/home/ros4/Desktop/TextAdventure/src/Main/Texte/Prolog.txt");
 
         /**
          * In diesem Loop läuft das spiel
