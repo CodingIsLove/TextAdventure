@@ -1,3 +1,6 @@
+<p align="center">
+  <img width="476" height="164" src="https://github.com/CodingIsLove/TextAdventure/blob/master/GithubTitle.png">
+</p>
 
 # Gittig
 ## Die Sage der verlorenen Abschlussprüfungen
