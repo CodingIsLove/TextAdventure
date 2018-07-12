@@ -2,11 +2,12 @@ package Main;
 
 import Main.Graphics.Graphics;
 import Main.Hero.Hero;
-import Main.Items.Inventar;
 import Main.Rooms.AllLevels;
 import Main.TextParser.InputParser;
 import Main.Texte.TextStorage;
+import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
@@ -23,12 +24,12 @@ public class PlayMe {
         Hero chris = new Hero(AllLevels.bahnhof);
         InputParser parser = new InputParser(chris);
         Scanner scanner = new Scanner(System.in);
+        String basePath = new File("").getAbsolutePath();
 
         /**
          * Prolog des Spieles*/
         Graphics.titleScreen();
-        //TODO: Pfad unbedingt anpassen, sonst läuft es nicht auf allen Systemen
-        InputParser.fileReader("/home/ros4/Desktop/TextAdventure/src/Main/Texte/Prolog.txt");
+        InputParser.fileReader(basePath.concat("/src/Main/Texte/Prolog.txt"));
 
         /**
          * In diesem Loop läuft das spiel
@@ -38,9 +39,10 @@ public class PlayMe {
             parser.evaluate(word);
 
 
+
             //Beende das Spiel, wenn alle Prüfungen gefunden wurden und du dich im Büro befindest
             if(chris.getInventar().contains(linalg)&&chris.getInventar().contains(statistik)&&chris.getInventar().contains(gti)&&chris.getAktuellerRaum()== AllLevels.office){
-                System.out.println(TextStorage.EPILOG);
+                InputParser.fileReader(basePath.concat("/src/Main/Texte/Epilog.txt"));
                 game_not_completed = false;
             }
 

@@ -220,15 +220,4 @@ public final class TextStorage {
     public static final String NO_DOOR_HERE ="An der Wand, die du Betrachtest gibt es keine Türe";
     public static final String CHANGED_ROOM = "Du hast den Raum gewechselt und bist nun hier --> ";
     public static final String VIEW = "Dein Blick fällt nach: ";
-    //TODO: WHO AM I?
-    //TODO: Mission
-    //TODO: InputSyntax definieren
-    //TODO:
-
-
-
-
-
-
-
 }

@@ -193,11 +193,11 @@ public class InputParser {
          */
 
         if(help.matcher(command).matches()){
+            String basePath = new File("").getAbsolutePath();
             if(manual.matcher(command).matches()){
-                InputParser.fileReader("/home/ros4/Desktop/TextAdventure/src/Main/Texte/SpielAnleitung.txt");
+                InputParser.fileReader(basePath.concat("/src/Main/Texte/SpielAnleitung.txt"));
             }else{
-                InputParser.fileReader("/home/ros4/Desktop/TextAdventure/src/Main/Texte/help.txt");
-
+                InputParser.fileReader(basePath.concat("/src/Main/Texte/help.txt"));
             }
         }
     }
