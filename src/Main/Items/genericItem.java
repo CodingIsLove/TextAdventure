@@ -25,7 +25,7 @@ public class genericItem {
     }
 
     /**
-     * Beschreibung des Gegenstandes mit Farben
+     * Beschreibung des Gegenstandes
      */
     public String getDescription(){
         return this.description;
