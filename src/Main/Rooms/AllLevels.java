@@ -43,7 +43,7 @@ public class AllLevels {
 
     //------------------------------------------- Welle 7 ----------------------------------------------------------------------------
     private static Wall nordWand_Welle7 = new Wall(TextStorage.WALL_NAME_GITTIG,TextStorage.WALL_DESCRIPTION_GITTTIG);
-    private static Wall ostWand_Welle7 =  new Wall(TextStorage.DOOR_NAME_STAIRS_EG_GANG,TextStorage.DOOR_DESCRIPTION_STAIRS_EG_GANG,RoomName.ETAGE1);
+    private static Wall ostWand_Welle7 =  new Wall(TextStorage.WEST_WALL_NAME_SECOND_FLOOR,TextStorage.DOOR_DESCRIPTION_STAIRS_EG_GANG,RoomName.ETAGE1);
     private static Wall suedWand_Welle7 = new Wall(TextStorage.WALL_NAME_WURST_MORITZ,TextStorage.WALL_DESCRIPTION_WURST_MORITZ,wurstMoritz);
     private static Wall westWand_Welle7 = new Wall(TextStorage.WALL_NAME_ESCALATOR,TextStorage.WALL_DESCRIPTION_ESCALATOR_REVERSE, RoomName.BHF);
 
@@ -87,9 +87,9 @@ public class AllLevels {
 
     //--------------------------------------------- Obere Etage ----------------------------------------------------------------------------
     private static Wall nordWand_ObereEtage = new Wall(TextStorage.NORTH_WALL_NAME_UPPER_FLOOR,TextStorage.NORTH_WALL_DESCRIPTION_UPPER_FLOOR);
-    private static Wall ostWand_ObereEtage = new Wall(TextStorage.EAST_WALL_NAME_UPPER_FLOOR,TextStorage.EAST_WALL_DESCRIPTION_UPPER_FLOOR,RoomName.OFFICE);
+    private static Wall westWand_ObereEtage = new Wall(TextStorage.EAST_WALL_NAME_UPPER_FLOOR,TextStorage.EAST_WALL_DESCRIPTION_UPPER_FLOOR,RoomName.ETAGE2);
     private static Wall suedWand_ObereEtage = new Wall(TextStorage.SOUTH_WALL_NAME_UPPER_FLOOR,TextStorage.SOUTH_WALL_DESCRIPTION_UPPER_FLOOR);
-    private static Wall westWand_ObereEtage = new Wall(TextStorage.WEST_WALL_NAME_UPPER_FLOOR,TextStorage.WEST_WALL_DESCRIPTION_UPPER_FLOOR,RoomName.ETAGE2);
+    private static Wall ostWand_ObereEtage = new Wall(TextStorage.WEST_WALL_NAME_UPPER_FLOOR,TextStorage.WEST_WALL_DESCRIPTION_UPPER_FLOOR,RoomName.OFFICE);
 
     public static Room obereEtage = new Room(nordWand_ObereEtage,ostWand_ObereEtage,suedWand_ObereEtage,westWand_ObereEtage,TextStorage.ROOM_NAME_3FLOOR,RoomName.OBERE_ETAGE);
 

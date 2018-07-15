@@ -19,5 +19,6 @@ a|b|c := Nimm entweder a ODER b ODER c  (XOR!)
 |Karte              |     keine       | Zeigt die Karte des ganzen Spieles                                                       |
 |Was sehe ich       |     keine       | Gibt die fokusierte wand zurück                                                          |
 |Interagiere        |    [Zahl]       | Interagiere mit der fokusierten Wand. Dies ist nur möglich, wenn was verdächtig erscheint|
+|Lösung             |     keine       | Beschreibt die Lösung des Games [ist ein Cheat! nur für ungeduldige Spieler]             |
 ----------------------------------------------------------------------------------------------------------------------------------
 <Richtung> := Norden,Osten,Süden,Westen]

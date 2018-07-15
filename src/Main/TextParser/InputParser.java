@@ -65,6 +65,7 @@ public class InputParser {
     Pattern codeEnding = Pattern.compile(TextStorage.CODE_INPUT);
     Pattern map = Pattern.compile(TextStorage.MAP);
     Pattern manual = Pattern.compile(TextStorage.MANUAL);
+    Pattern cheat = Pattern.compile(TextStorage.CHEAT);
 
 
     /**
@@ -126,19 +127,14 @@ public class InputParser {
         if(go_somewhere.matcher(command).matches()){
             if(north.matcher(command).matches()){
                 hero.changeRoom(Directions.NORTH);
-                System.out.println(TextStorage.CHANGED_ROOM + hero.getAktuellerRaum().getRoomName());
             }else if(east.matcher(command).matches()){
                 hero.changeRoom(Directions.EAST);
-                System.out.println(TextStorage.CHANGED_ROOM + hero.getAktuellerRaum().getRoomName());
             }else if(south.matcher(command).matches()){
                 hero.changeRoom(Directions.SOUTH);
-                System.out.println(TextStorage.CHANGED_ROOM + hero.getAktuellerRaum().getRoomName());
             }else if(west.matcher(command).matches()){
                 hero.changeRoom(Directions.WEST);
-                System.out.println(TextStorage.CHANGED_ROOM + hero.getAktuellerRaum().getRoomName());
             }else{
-                System.out.println(TextStorage.NO_DOOR_HERE);
-                System.out.println(TextStorage.CHANGED_ROOM + hero.getAktuellerRaum().getRoomName());
+
             }
         }
 
@@ -199,6 +195,14 @@ public class InputParser {
             }else{
                 InputParser.fileReader(basePath.concat("/src/Main/Texte/help.txt"));
             }
+        }
+
+        /**
+         * Lösung anzeigen für ungeduldige
+         */
+        if(cheat.matcher(command).matches()){
+            String basePath = new File("").getAbsolutePath();
+            InputParser.fileReader(basePath.concat("/src/Main/Texte/developerNotes.txt"));
         }
     }
 

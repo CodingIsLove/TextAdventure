@@ -67,13 +67,13 @@ public final class TextStorage {
     // Welle 7 / Erdgeschoss
     public static final String ROOM_NAME_WELLE7 = "Welle 7";
     public static final String WALL_NAME_GITTIG ="Gittig"  ;
-    public static final String WALL_DESCRIPTION_GITTTIG = "Ach herje.... wie schön Sie zu sehen! Mir ist etwas unglaubiches Passiert. Als ich rasch im Wurst und Moritz meine gratis Wurst holen wollten mit meinen 10 Stempel auf der Stempelkarte"+
-      " entwendete jemand die Prüfungen aus meinem Büro. Alle Prüfungen sind Weg!!!! \n"+
-      "Keine Linearen Algebraprüfungen, keine Statistikprüfungen und keine GTIprüfungen mehr. Kannst du mir helfen diese zu finden? Falls du was findest, kannst du sie mir im Büro der FFHS abgeben." +
+    public static final String WALL_DESCRIPTION_GITTTIG = "Ach herje.... wie schön Sie zu sehen! Mir ist etwas unglaubiches Passiert. Als ich rasch im Wurst und Moritz meine gratis Wurst holen wollten \nmit meinen 10 Stempel auf der Stempelkarte"+
+      " entwendete jemand die Prüfungen aus meinem Büro.\nAlle Prüfungen sind Weg!!!! \n"+
+      "Keine Linearen Algebraprüfungen, keine Statistikprüfungen und keine GTIprüfungen mehr. Kannst du mir helfen diese zu finden? \nFalls du was findest, kannst du sie mir im Büro der FFHS abgeben." +
       " Ansonsten müssen alle die Prüfungen nachholen. Und sind wütend auf mich.";
     public static final String WALL_NAME_WURST_MORITZ = "Wurst und Moritz";
-    public static final String WALL_DESCRIPTION_WURST_MORITZ = "Du siehst das breite Grinsen des Wurstverkäufers. Es läuft dir das Wasser im Mund zusammen, wenn du diese deftigen Würste siehst... Ich wache wieder aus meinen Gedanken auf" +
-      " und versuche mich auf mein eigentliches Ziel zu konzentrieren. Die Prüfungen muss ich wiederfinden.";
+    public static final String WALL_DESCRIPTION_WURST_MORITZ = "Du siehst das breite Grinsen des Wurstverkäufers. Er Spricht dich an \nWurstverkäufer: Ich habe ein Geschenk für dich, doch zuerst musst du mir" +
+            " eine Frage beantworten. \nWie viele Stempel braucht es für eine Gratiswurst? (Hilfe: Interagiere <anzahl>)";
     public static final String WALL_OPEN_MESSAGE_WURST_MORITZ = " Du scheinst ein Wahrer Kunde zu sein! Hier hast du den Stapel von Linalg Prüfungen, die ich gefunden habe";
     public static final String WALL_EMPTY_MESSAGE_WURST_MORITZ =" Du hast die Prüfungen bereits geholt. Mehr kann ich dir nicht geben!";
     public static final String WALL_DENY_MESSAGE_WURST_MORITZ = " Schade, dass du nichteinmal dass weisst... Du bist leider nicht so ein treuer Kunde wie Gittig. Ich bin zu tiefst entäuscht";
@@ -147,7 +147,7 @@ public final class TextStorage {
     public static final String NORTH_WALL_DESCRIPTION_STUDY_ROOM = "Ich wünschte der Kaffeautomat würde funktionieren. Leider ist dieser eher zur dekoration im Raum.";
 
     //Obere Etage
-    public static final String ROOM_NAME_3FLOOR = "3.Etage";
+    public static final String ROOM_NAME_3FLOOR = "Obere Etage";
     public static final String EAST_WALL_NAME_UPPER_FLOOR = "Tür";
     public static final String EAST_WALL_DESCRIPTION_UPPER_FLOOR = "Du siehst den Lift, welchen dich zur zweiten Etage bringt.";
     public static final String WEST_WALL_NAME_UPPER_FLOOR = "Tür";
@@ -188,8 +188,6 @@ public final class TextStorage {
 
 
 
-    //--------------------------------------- HELP MESSAGE ---------------------------------------
-
 
 
    //---------------------------------------- KEY WORDS -------------------------------------
@@ -207,6 +205,7 @@ public final class TextStorage {
     public static final String CODE_INPUT = ".*[0-9]+";
     public static final String MAP = "KARTE";
     public static final String MANUAL = ".*ANLEITUNG";
+    public static final String CHEAT ="LÖSUNG";
 
     //Himmelsrichtungen
     public static final String NORTH = ".*NORDEN" ;

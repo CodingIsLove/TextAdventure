@@ -32,12 +32,21 @@ public class Hero{
      */
 
     public void changeRoom(){
-        this.aktuellerRaum = aktuellerRaum.getFocusedWall().useDoor();
+
+        if(aktuellerRaum.getFocusedWall().useDoor() != null){
+            this.aktuellerRaum = aktuellerRaum.getFocusedWall().useDoor();
+        }
     }
 
     public void changeRoom(Directions direction){
         aktuellerRaum.setFocusedDirection(direction);
-        this.aktuellerRaum = aktuellerRaum.getFocusedWall().useDoor();
+
+        if(aktuellerRaum.getFocusedWall().useDoor() != null){
+            this.aktuellerRaum = aktuellerRaum.getFocusedWall().useDoor();
+            System.out.println(TextStorage.CHANGED_ROOM + this.getAktuellerRaum().getRoomName());
+        }else{
+            System.out.println(TextStorage.NO_DOOR_HERE);
+        }
     }
 
     public void openKiste(){

@@ -1,1 +1,8 @@
-TODO: schreibe Entwickler Notizen
+
+
+Lösung des Spieles:
+
+1. Gehe vom Banhhof aus in den Osten und interagiere dort mit dem Wurst und Moritz stand (interagiere 10). Danach solltest du die Linalgprüfungen bekommen.
+2. Du gehst weiter auf das WC und und interagierst dort mit dem Waschbecken (braucht keine Zahl zum interagieren). Nun hast du die Linalgprüfungen.
+3. Gehe weiter in den Studienraum, wo du im Osten das Pult siehst. Mit diesem kannst du interagieren um die GTI Prüfungen zu bekommen.
+4. Jetzt wo du alle Prüfungen hast gehst du ins Büro von Gittig und hast das Spiel gemeistert.

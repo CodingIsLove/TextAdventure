@@ -116,7 +116,7 @@ public class Kiste {
      */
     public void unlockKiste(Integer code){
         //Falls der Code Stimmt wird die Kiste geöffnet
-        if(this.code.equals(code)) {
+        if(this.code == code) {
             this.isLocked = false;
             System.out.println(Colorlog.green(openMessage));
         }else {

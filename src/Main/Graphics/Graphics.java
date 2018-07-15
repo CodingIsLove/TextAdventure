@@ -31,7 +31,7 @@ public class Graphics {
         System.out.println("                               |    |       ");
         System.out.println("                       #####################    #####################");
         System.out.println("                       #                   #----#                   #");
-        System.out.println("                       #      2.Etage      #    #    Studienraum    #");
+        System.out.println("                       #      2.Etage      #    #  Unterrichtsraum  #");
         System.out.println("                       #                   #----#                   #");
         System.out.println("                       #####################    #####################");
         System.out.println("                               |    |       ");
